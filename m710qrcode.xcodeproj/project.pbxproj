@@ -29,6 +29,9 @@
 		94A99304281146DD00F3E521 /* M710_TextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A99301281146DD00F3E521 /* M710_TextView.m */; };
 		94A99305281146DD00F3E521 /* M710_TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A99302281146DD00F3E521 /* M710_TextField.m */; };
 		94A993092811556D00F3E521 /* HistoryCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A993082811556D00F3E521 /* HistoryCellView.m */; };
+		94A9930C28127CD200F3E521 /* M710_CreatResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A9930B28127CD200F3E521 /* M710_CreatResultController.m */; };
+		94A9930F2812913200F3E521 /* M710_ScanResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A9930E2812913200F3E521 /* M710_ScanResultController.m */; };
+		94A993132812AD0800F3E521 /* SettingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A993122812AD0800F3E521 /* SettingViewCell.m */; };
 		F69862EB9F892740D82FFB73 /* Pods_m710qrcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88FFEB34A023A0B4A0E12ED /* Pods_m710qrcode.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +82,12 @@
 		94A99302281146DD00F3E521 /* M710_TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M710_TextField.m; sourceTree = "<group>"; };
 		94A993072811556D00F3E521 /* HistoryCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryCellView.h; sourceTree = "<group>"; };
 		94A993082811556D00F3E521 /* HistoryCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryCellView.m; sourceTree = "<group>"; };
+		94A9930A28127CD200F3E521 /* M710_CreatResultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_CreatResultController.h; sourceTree = "<group>"; };
+		94A9930B28127CD200F3E521 /* M710_CreatResultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_CreatResultController.m; sourceTree = "<group>"; };
+		94A9930D2812913200F3E521 /* M710_ScanResultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_ScanResultController.h; sourceTree = "<group>"; };
+		94A9930E2812913200F3E521 /* M710_ScanResultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_ScanResultController.m; sourceTree = "<group>"; };
+		94A993112812AD0800F3E521 /* SettingViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewCell.h; sourceTree = "<group>"; };
+		94A993122812AD0800F3E521 /* SettingViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewCell.m; sourceTree = "<group>"; };
 		D88FFEB34A023A0B4A0E12ED /* Pods_m710qrcode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_m710qrcode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -149,6 +158,8 @@
 				94A992FC281145FB00F3E521 /* view */,
 				94A992E22811279A00F3E521 /* M710_CreatViewController.h */,
 				94A992E32811279A00F3E521 /* M710_CreatViewController.m */,
+				94A9930A28127CD200F3E521 /* M710_CreatResultController.h */,
+				94A9930B28127CD200F3E521 /* M710_CreatResultController.m */,
 			);
 			path = creat;
 			sourceTree = "<group>";
@@ -168,6 +179,8 @@
 			children = (
 				94A992CD2810073700F3E521 /* M710_ScanViewController.h */,
 				94A992CE2810073700F3E521 /* M710_ScanViewController.m */,
+				94A9930D2812913200F3E521 /* M710_ScanResultController.h */,
+				94A9930E2812913200F3E521 /* M710_ScanResultController.m */,
 			);
 			path = scan;
 			sourceTree = "<group>";
@@ -184,6 +197,7 @@
 		94A992CC281006C100F3E521 /* setting */ = {
 			isa = PBXGroup;
 			children = (
+				94A9931028129C3A00F3E521 /* view */,
 				94A992DC2811080700F3E521 /* M710_MineViewController.h */,
 				94A992DD2811080700F3E521 /* M710_MineViewController.m */,
 			);
@@ -270,6 +284,15 @@
 			children = (
 				94A993072811556D00F3E521 /* HistoryCellView.h */,
 				94A993082811556D00F3E521 /* HistoryCellView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		94A9931028129C3A00F3E521 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				94A993112812AD0800F3E521 /* SettingViewCell.h */,
+				94A993122812AD0800F3E521 /* SettingViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -406,12 +429,15 @@
 				94A993092811556D00F3E521 /* HistoryCellView.m in Sources */,
 				94A992B1280FEE5900F3E521 /* AppDelegate.m in Sources */,
 				94A992F428113A5B00F3E521 /* XCWebViewController.m in Sources */,
+				94A9930C28127CD200F3E521 /* M710_CreatResultController.m in Sources */,
 				94A992F528113A5B00F3E521 /* NSObject+TopViewController.m in Sources */,
 				94A992E1281108E300F3E521 /* M710_HistoryViewController.m in Sources */,
 				94A992ED281139CB00F3E521 /* M710_BaseViewController.m in Sources */,
+				94A993132812AD0800F3E521 /* SettingViewCell.m in Sources */,
 				94A992C2280FEE5900F3E521 /* main.m in Sources */,
 				94A992FB2811406300F3E521 /* M710_LaunchController.m in Sources */,
 				94A992D7281105EF00F3E521 /* LBTabBarController.m in Sources */,
+				94A9930F2812913200F3E521 /* M710_ScanResultController.m in Sources */,
 				94A992E7281127C800F3E521 /* M710_NetViewController.m in Sources */,
 				94A992D6281105EF00F3E521 /* LBTabBar.m in Sources */,
 				94A992E42811279A00F3E521 /* M710_CreatViewController.m in Sources */,

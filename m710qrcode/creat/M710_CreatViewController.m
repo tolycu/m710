@@ -7,6 +7,7 @@
 
 #import "M710_CreatViewController.h"
 #import "M710_FolderViewCell.h"
+#import "M710_CreatResultController.h"
 
 @interface M710_CreatViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -33,7 +34,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-//    Sport_EditViewController *vc = [[Sport_EditViewController alloc] init];
+    M710_CreatResultController *vc = [[M710_CreatResultController alloc] init];
 //    if (indexPath.item == 0) {
 //        vc.qrType = DataStringQRType_url;
 //    }else if (indexPath.item == 1){
@@ -47,8 +48,8 @@
 //    }else if (indexPath.item == 5){
 //        vc.qrType = DataStringQRType_sms;
 //    }
-//    vc.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:vc animated:YES];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)addSubView_layout{

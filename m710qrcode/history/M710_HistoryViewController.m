@@ -6,13 +6,19 @@
 //
 
 #import "M710_HistoryViewController.h"
+#import "HistoryCellView.h"
+#import "M710_ScanResultController.h"
 
-@interface M710_HistoryViewController ()
+@interface M710_HistoryViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic ,strong) UIButton *leftBtn;
 @property (nonatomic ,strong) UIButton *rightBtn;
 @property (nonatomic ,strong) UIView *dotLView;
 @property (nonatomic ,strong) UIView *dotRView;
+
+@property (nonatomic ,strong) UITableView *tableView;
+@property (nonatomic ,strong) NSMutableArray *dataList;
+
 
 @end
 
@@ -39,6 +45,36 @@
         self.leftBtn.selected = NO;
         self.rightBtn.selected = YES;
     }
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 10;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    HistoryCellView *cell = [tableView dequeueReusableCellWithIdentifier:@"HistoryCellView" forIndexPath:indexPath];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 5.f;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *footerView = [[UIView alloc] init];
+    footerView.backgroundColor = [UIColor colorWithString:@"#FAFAFA"];
+    return footerView;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    M710_ScanResultController *vc = [[M710_ScanResultController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)addSubView_layout{
@@ -94,7 +130,34 @@
         make.centerY.equalTo(leftBtn.mas_bottom);
         make.centerX.equalTo(rightBtn);
     }];
+    
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.left.right.equalTo(self.view);
+        make.top.equalTo(self.dotLView.mas_bottom).offset(10);
+    }];
 }
 
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
+}
+
+-(UITableView *)tableView{
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        _tableView.rowHeight = 100;
+        _tableView.sectionFooterHeight = 5.f;
+        _tableView.sectionHeaderHeight = 0.f;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [_tableView registerClass:[HistoryCellView class] forCellReuseIdentifier:@"HistoryCellView"];
+        _tableView.backgroundColor = [UIColor clearColor];
+    }
+    return _tableView;
+}
 
 @end
