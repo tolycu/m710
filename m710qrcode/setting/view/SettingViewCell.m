@@ -25,6 +25,22 @@
     return self;
 }
 
+- (void)setDict:(NSDictionary *)dict{
+    if (dict) {
+        _dict = dict;
+        self.icon.image = [UIImage imageNamed:dict[@"img"]];
+        self.titleLab.text = dict[@"title"];
+        self.rightImg.hidden = [dict[@"isSwitch"] boolValue];
+        self.switchBtn.hidden = !self.rightImg.hidden;
+    }
+    
+}
+
+- (void)hideRightBtn{
+    self.rightImg.hidden = YES;
+    self.switchBtn.hidden = YES;
+}
+
 - (void)switchChange:(UISwitch*)sw {
     if(sw.on == YES) {
         NSLog(@"开关切换为开");
@@ -46,15 +62,15 @@
     }];
     
     self.titleLab = [[UILabel alloc] init];
-    self.titleLab.font = [UIFont systemFontOfSize:12];
+    self.titleLab.font = [UIFont systemFontOfSize:14];
     self.titleLab.textColor = [UIColor colorWithString:@"#1A1A1A"];
     [self.contentView addSubview:self.titleLab];
     [self.titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView);
-        make.left.equalTo(self.contentView).offset(10);
+        make.left.equalTo(self.icon.mas_right).offset(10);
     }];
     
-    self.rightImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
+    self.rightImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"set_arrow"]];
     [self.contentView addSubview:self.rightImg];
     [self.rightImg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.contentView).offset(-15);
@@ -69,5 +85,9 @@
     self.switchBtn.on = NO;
     [self.switchBtn addTarget:self action:@selector(switchChange:) forControlEvents:UIControlEventValueChanged];
     [self.contentView addSubview:self.switchBtn];
+    [self.switchBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.contentView);
+        make.right.equalTo(self.contentView).offset(-15);
+    }];
 }
 @end

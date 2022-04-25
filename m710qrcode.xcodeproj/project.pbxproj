@@ -32,6 +32,26 @@
 		94A9930C28127CD200F3E521 /* M710_CreatResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A9930B28127CD200F3E521 /* M710_CreatResultController.m */; };
 		94A9930F2812913200F3E521 /* M710_ScanResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A9930E2812913200F3E521 /* M710_ScanResultController.m */; };
 		94A993132812AD0800F3E521 /* SettingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A993122812AD0800F3E521 /* SettingViewCell.m */; };
+		94C260F928151A9A0075B013 /* M710_AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C260F828151A9A0075B013 /* M710_AboutViewController.m */; };
+		94C260FC281520980075B013 /* M710_RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C260FB281520980075B013 /* M710_RateView.m */; };
+		94C260FF28153EF20075B013 /* M710_ClearCacheView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C260FE28153EF20075B013 /* M710_ClearCacheView.m */; };
+		94C26103281555170075B013 /* M710_VpnConnectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C26102281555170075B013 /* M710_VpnConnectView.m */; };
+		94C26107281558D20075B013 /* Sport_GlobalMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C26105281558D20075B013 /* Sport_GlobalMananger.m */; };
+		94C2610A281559160075B013 /* Sport_QRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C26109281559160075B013 /* Sport_QRManager.m */; };
+		94C2610D281559280075B013 /* Sport_CardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2610B281559280075B013 /* Sport_CardModel.m */; };
+		94C261152815595C0075B013 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2610F2815595C0075B013 /* NSDate+Helper.m */; };
+		94C261162815595C0075B013 /* PingFoundtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C261102815595C0075B013 /* PingFoundtion.m */; };
+		94C261172815595C0075B013 /* PingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C261132815595C0075B013 /* PingHelper.m */; };
+		94C2611A28156BCB0075B013 /* SportAppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2611828156BCB0075B013 /* SportAppConfig.m */; };
+		94C2611E28163CA10075B013 /* start.json in Resources */ = {isa = PBXBuildFile; fileRef = 94C2611C28163CA10075B013 /* start.json */; };
+		94C2611F28163CA10075B013 /* connect.json in Resources */ = {isa = PBXBuildFile; fileRef = 94C2611D28163CA10075B013 /* connect.json */; };
+		94C2612228164A2D0075B013 /* M710_VpnResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2612128164A2D0075B013 /* M710_VpnResultController.m */; };
+		94C2612528167BEF0075B013 /* M710_ConnectServerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2612428167BEF0075B013 /* M710_ConnectServerView.m */; };
+		94C26128281682E90075B013 /* M710_ConnectTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C26127281682E90075B013 /* M710_ConnectTypeView.m */; };
+		94C2612B2816C96C0075B013 /* M710_ServerListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2612A2816C96C0075B013 /* M710_ServerListController.m */; };
+		94C261312816CA7E0075B013 /* Sport_GlobalConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2612E2816CA7E0075B013 /* Sport_GlobalConfigModel.m */; };
+		94C261322816CA7E0075B013 /* Sport_ServerVPNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2612F2816CA7E0075B013 /* Sport_ServerVPNModel.m */; };
+		94C261352816CBB30075B013 /* M710_ServerListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C261342816CBB30075B013 /* M710_ServerListCell.m */; };
 		F69862EB9F892740D82FFB73 /* Pods_m710qrcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88FFEB34A023A0B4A0E12ED /* Pods_m710qrcode.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +108,44 @@
 		94A9930E2812913200F3E521 /* M710_ScanResultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_ScanResultController.m; sourceTree = "<group>"; };
 		94A993112812AD0800F3E521 /* SettingViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewCell.h; sourceTree = "<group>"; };
 		94A993122812AD0800F3E521 /* SettingViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewCell.m; sourceTree = "<group>"; };
+		94C260F728151A9A0075B013 /* M710_AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_AboutViewController.h; sourceTree = "<group>"; };
+		94C260F828151A9A0075B013 /* M710_AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_AboutViewController.m; sourceTree = "<group>"; };
+		94C260FA281520980075B013 /* M710_RateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_RateView.h; sourceTree = "<group>"; };
+		94C260FB281520980075B013 /* M710_RateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_RateView.m; sourceTree = "<group>"; };
+		94C260FD28153EF20075B013 /* M710_ClearCacheView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_ClearCacheView.h; sourceTree = "<group>"; };
+		94C260FE28153EF20075B013 /* M710_ClearCacheView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_ClearCacheView.m; sourceTree = "<group>"; };
+		94C26101281555170075B013 /* M710_VpnConnectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_VpnConnectView.h; sourceTree = "<group>"; };
+		94C26102281555170075B013 /* M710_VpnConnectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_VpnConnectView.m; sourceTree = "<group>"; };
+		94C26105281558D20075B013 /* Sport_GlobalMananger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport_GlobalMananger.m; sourceTree = "<group>"; };
+		94C26106281558D20075B013 /* Sport_GlobalMananger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport_GlobalMananger.h; sourceTree = "<group>"; };
+		94C26108281559160075B013 /* Sport_QRManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport_QRManager.h; sourceTree = "<group>"; };
+		94C26109281559160075B013 /* Sport_QRManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport_QRManager.m; sourceTree = "<group>"; };
+		94C2610B281559280075B013 /* Sport_CardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport_CardModel.m; sourceTree = "<group>"; };
+		94C2610C281559280075B013 /* Sport_CardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport_CardModel.h; sourceTree = "<group>"; };
+		94C2610F2815595C0075B013 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		94C261102815595C0075B013 /* PingFoundtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingFoundtion.m; sourceTree = "<group>"; };
+		94C261112815595C0075B013 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
+		94C261122815595C0075B013 /* PingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingHelper.h; sourceTree = "<group>"; };
+		94C261132815595C0075B013 /* PingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingHelper.m; sourceTree = "<group>"; };
+		94C261142815595C0075B013 /* PingFoundtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingFoundtion.h; sourceTree = "<group>"; };
+		94C2611828156BCB0075B013 /* SportAppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SportAppConfig.m; sourceTree = "<group>"; };
+		94C2611928156BCB0075B013 /* SportAppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SportAppConfig.h; sourceTree = "<group>"; };
+		94C2611C28163CA10075B013 /* start.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = start.json; sourceTree = "<group>"; };
+		94C2611D28163CA10075B013 /* connect.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = connect.json; sourceTree = "<group>"; };
+		94C2612028164A2D0075B013 /* M710_VpnResultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_VpnResultController.h; sourceTree = "<group>"; };
+		94C2612128164A2D0075B013 /* M710_VpnResultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_VpnResultController.m; sourceTree = "<group>"; };
+		94C2612328167BEF0075B013 /* M710_ConnectServerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_ConnectServerView.h; sourceTree = "<group>"; };
+		94C2612428167BEF0075B013 /* M710_ConnectServerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_ConnectServerView.m; sourceTree = "<group>"; };
+		94C26126281682E90075B013 /* M710_ConnectTypeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_ConnectTypeView.h; sourceTree = "<group>"; };
+		94C26127281682E90075B013 /* M710_ConnectTypeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_ConnectTypeView.m; sourceTree = "<group>"; };
+		94C261292816C96C0075B013 /* M710_ServerListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_ServerListController.h; sourceTree = "<group>"; };
+		94C2612A2816C96C0075B013 /* M710_ServerListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_ServerListController.m; sourceTree = "<group>"; };
+		94C2612D2816CA7E0075B013 /* Sport_ServerVPNModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport_ServerVPNModel.h; sourceTree = "<group>"; };
+		94C2612E2816CA7E0075B013 /* Sport_GlobalConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport_GlobalConfigModel.m; sourceTree = "<group>"; };
+		94C2612F2816CA7E0075B013 /* Sport_ServerVPNModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport_ServerVPNModel.m; sourceTree = "<group>"; };
+		94C261302816CA7E0075B013 /* Sport_GlobalConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport_GlobalConfigModel.h; sourceTree = "<group>"; };
+		94C261332816CBB30075B013 /* M710_ServerListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_ServerListCell.h; sourceTree = "<group>"; };
+		94C261342816CBB30075B013 /* M710_ServerListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_ServerListCell.m; sourceTree = "<group>"; };
 		D88FFEB34A023A0B4A0E12ED /* Pods_m710qrcode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_m710qrcode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,6 +172,7 @@
 		94A992A3280FEE5900F3E521 = {
 			isa = PBXGroup;
 			children = (
+				94C2611B28163C900075B013 /* datasource */,
 				94A992EE28113A4700F3E521 /* CommonKit */,
 				94A992AE280FEE5900F3E521 /* m710qrcode */,
 				94A992AD280FEE5900F3E521 /* Products */,
@@ -188,8 +247,13 @@
 		94A992CB281006B800F3E521 /* netVpn */ = {
 			isa = PBXGroup;
 			children = (
+				94C2610028154FD30075B013 /* view */,
 				94A992E5281127C800F3E521 /* M710_NetViewController.h */,
 				94A992E6281127C800F3E521 /* M710_NetViewController.m */,
+				94C261292816C96C0075B013 /* M710_ServerListController.h */,
+				94C2612A2816C96C0075B013 /* M710_ServerListController.m */,
+				94C2612028164A2D0075B013 /* M710_VpnResultController.h */,
+				94C2612128164A2D0075B013 /* M710_VpnResultController.m */,
 			);
 			path = netVpn;
 			sourceTree = "<group>";
@@ -200,6 +264,8 @@
 				94A9931028129C3A00F3E521 /* view */,
 				94A992DC2811080700F3E521 /* M710_MineViewController.h */,
 				94A992DD2811080700F3E521 /* M710_MineViewController.m */,
+				94C260F728151A9A0075B013 /* M710_AboutViewController.h */,
+				94C260F828151A9A0075B013 /* M710_AboutViewController.m */,
 			);
 			path = setting;
 			sourceTree = "<group>";
@@ -232,13 +298,16 @@
 		94A992EE28113A4700F3E521 /* CommonKit */ = {
 			isa = PBXGroup;
 			children = (
+				94C2612C2816CA7E0075B013 /* m710_model */,
+				94C2610E2815593E0075B013 /* m710_pingHelp */,
+				94C26104281558AD0075B013 /* m710_toolManager */,
 				94A992F628113AF800F3E521 /* m710_define */,
-				94A992EF28113A5B00F3E521 /* m710__category */,
+				94A992EF28113A5B00F3E521 /* m710_category */,
 			);
 			path = CommonKit;
 			sourceTree = "<group>";
 		};
-		94A992EF28113A5B00F3E521 /* m710__category */ = {
+		94A992EF28113A5B00F3E521 /* m710_category */ = {
 			isa = PBXGroup;
 			children = (
 				94A992F328113A5B00F3E521 /* XCWebViewController.h */,
@@ -246,7 +315,7 @@
 				94A992F228113A5B00F3E521 /* NSObject+TopViewController.h */,
 				94A992F128113A5B00F3E521 /* NSObject+TopViewController.m */,
 			);
-			path = m710__category;
+			path = m710_category;
 			sourceTree = "<group>";
 		};
 		94A992F628113AF800F3E521 /* m710_define */ = {
@@ -293,8 +362,75 @@
 			children = (
 				94A993112812AD0800F3E521 /* SettingViewCell.h */,
 				94A993122812AD0800F3E521 /* SettingViewCell.m */,
+				94C260FA281520980075B013 /* M710_RateView.h */,
+				94C260FB281520980075B013 /* M710_RateView.m */,
+				94C260FD28153EF20075B013 /* M710_ClearCacheView.h */,
+				94C260FE28153EF20075B013 /* M710_ClearCacheView.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		94C2610028154FD30075B013 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				94C26101281555170075B013 /* M710_VpnConnectView.h */,
+				94C26102281555170075B013 /* M710_VpnConnectView.m */,
+				94C2612328167BEF0075B013 /* M710_ConnectServerView.h */,
+				94C2612428167BEF0075B013 /* M710_ConnectServerView.m */,
+				94C26126281682E90075B013 /* M710_ConnectTypeView.h */,
+				94C26127281682E90075B013 /* M710_ConnectTypeView.m */,
+				94C261332816CBB30075B013 /* M710_ServerListCell.h */,
+				94C261342816CBB30075B013 /* M710_ServerListCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		94C26104281558AD0075B013 /* m710_toolManager */ = {
+			isa = PBXGroup;
+			children = (
+				94C2610C281559280075B013 /* Sport_CardModel.h */,
+				94C2610B281559280075B013 /* Sport_CardModel.m */,
+				94C26108281559160075B013 /* Sport_QRManager.h */,
+				94C26109281559160075B013 /* Sport_QRManager.m */,
+				94C26106281558D20075B013 /* Sport_GlobalMananger.h */,
+				94C26105281558D20075B013 /* Sport_GlobalMananger.m */,
+				94C2611928156BCB0075B013 /* SportAppConfig.h */,
+				94C2611828156BCB0075B013 /* SportAppConfig.m */,
+			);
+			path = m710_toolManager;
+			sourceTree = "<group>";
+		};
+		94C2610E2815593E0075B013 /* m710_pingHelp */ = {
+			isa = PBXGroup;
+			children = (
+				94C261112815595C0075B013 /* NSDate+Helper.h */,
+				94C2610F2815595C0075B013 /* NSDate+Helper.m */,
+				94C261142815595C0075B013 /* PingFoundtion.h */,
+				94C261102815595C0075B013 /* PingFoundtion.m */,
+				94C261122815595C0075B013 /* PingHelper.h */,
+				94C261132815595C0075B013 /* PingHelper.m */,
+			);
+			path = m710_pingHelp;
+			sourceTree = "<group>";
+		};
+		94C2611B28163C900075B013 /* datasource */ = {
+			isa = PBXGroup;
+			children = (
+				94C2611D28163CA10075B013 /* connect.json */,
+				94C2611C28163CA10075B013 /* start.json */,
+			);
+			path = datasource;
+			sourceTree = "<group>";
+		};
+		94C2612C2816CA7E0075B013 /* m710_model */ = {
+			isa = PBXGroup;
+			children = (
+				94C261302816CA7E0075B013 /* Sport_GlobalConfigModel.h */,
+				94C2612E2816CA7E0075B013 /* Sport_GlobalConfigModel.m */,
+				94C2612D2816CA7E0075B013 /* Sport_ServerVPNModel.h */,
+				94C2612F2816CA7E0075B013 /* Sport_ServerVPNModel.m */,
+			);
+			path = m710_model;
 			sourceTree = "<group>";
 		};
 		C384495B079138BB7E76EBB9 /* Pods */ = {
@@ -365,7 +501,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94C2611E28163CA10075B013 /* start.json in Resources */,
 				94A992BF280FEE5900F3E521 /* LaunchScreen.storyboard in Resources */,
+				94C2611F28163CA10075B013 /* connect.json in Resources */,
 				94A992BC280FEE5900F3E521 /* Assets.xcassets in Resources */,
 				94A992BA280FEE5900F3E521 /* Main.storyboard in Resources */,
 			);
@@ -422,25 +560,43 @@
 			files = (
 				94A99305281146DD00F3E521 /* M710_TextField.m in Sources */,
 				94A992DB281107A500F3E521 /* UIView+LBExtension.m in Sources */,
+				94C2612B2816C96C0075B013 /* M710_ServerListController.m in Sources */,
 				94A992EC281139CB00F3E521 /* BaseNavController.m in Sources */,
+				94C2611A28156BCB0075B013 /* SportAppConfig.m in Sources */,
 				94A992CF2810073700F3E521 /* M710_ScanViewController.m in Sources */,
+				94C260F928151A9A0075B013 /* M710_AboutViewController.m in Sources */,
+				94C2612528167BEF0075B013 /* M710_ConnectServerView.m in Sources */,
+				94C2610A281559160075B013 /* Sport_QRManager.m in Sources */,
+				94C261152815595C0075B013 /* NSDate+Helper.m in Sources */,
 				94A992DE2811080700F3E521 /* M710_MineViewController.m in Sources */,
 				94A99304281146DD00F3E521 /* M710_TextView.m in Sources */,
+				94C26103281555170075B013 /* M710_VpnConnectView.m in Sources */,
 				94A993092811556D00F3E521 /* HistoryCellView.m in Sources */,
 				94A992B1280FEE5900F3E521 /* AppDelegate.m in Sources */,
 				94A992F428113A5B00F3E521 /* XCWebViewController.m in Sources */,
 				94A9930C28127CD200F3E521 /* M710_CreatResultController.m in Sources */,
 				94A992F528113A5B00F3E521 /* NSObject+TopViewController.m in Sources */,
 				94A992E1281108E300F3E521 /* M710_HistoryViewController.m in Sources */,
+				94C2610D281559280075B013 /* Sport_CardModel.m in Sources */,
 				94A992ED281139CB00F3E521 /* M710_BaseViewController.m in Sources */,
+				94C26107281558D20075B013 /* Sport_GlobalMananger.m in Sources */,
+				94C2612228164A2D0075B013 /* M710_VpnResultController.m in Sources */,
 				94A993132812AD0800F3E521 /* SettingViewCell.m in Sources */,
 				94A992C2280FEE5900F3E521 /* main.m in Sources */,
+				94C261172815595C0075B013 /* PingHelper.m in Sources */,
 				94A992FB2811406300F3E521 /* M710_LaunchController.m in Sources */,
 				94A992D7281105EF00F3E521 /* LBTabBarController.m in Sources */,
+				94C260FF28153EF20075B013 /* M710_ClearCacheView.m in Sources */,
 				94A9930F2812913200F3E521 /* M710_ScanResultController.m in Sources */,
+				94C261322816CA7E0075B013 /* Sport_ServerVPNModel.m in Sources */,
+				94C261352816CBB30075B013 /* M710_ServerListCell.m in Sources */,
 				94A992E7281127C800F3E521 /* M710_NetViewController.m in Sources */,
 				94A992D6281105EF00F3E521 /* LBTabBar.m in Sources */,
+				94C260FC281520980075B013 /* M710_RateView.m in Sources */,
+				94C261312816CA7E0075B013 /* Sport_GlobalConfigModel.m in Sources */,
+				94C26128281682E90075B013 /* M710_ConnectTypeView.m in Sources */,
 				94A992E42811279A00F3E521 /* M710_CreatViewController.m in Sources */,
+				94C261162815595C0075B013 /* PingFoundtion.m in Sources */,
 				94A99303281146DD00F3E521 /* M710_FolderViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

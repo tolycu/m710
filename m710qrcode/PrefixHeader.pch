@@ -23,6 +23,10 @@
 #import "M710_BaseViewController.h"
 #import "NSObject+TopViewController.h"
 
+#import "Sport_GlobalMananger.h"
+#import "Sport_ServerVPNModel.h"
+#import "Sport_GlobalConfigModel.h"
+
 
 //kWeakSelf
 #define kWeakSelf(type)         __weak typeof(type) weak##type = type;

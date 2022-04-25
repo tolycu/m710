@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface M710_MineViewController : M710_BaseViewController
 
+
+
 @end
 
 NS_ASSUME_NONNULL_END

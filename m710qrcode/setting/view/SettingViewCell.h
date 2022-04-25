@@ -11,6 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SettingViewCell : UITableViewCell
 
+@property (nonatomic ,strong) NSDictionary *dict;
+
+- (void)hideRightBtn;
+
 @end
 
 NS_ASSUME_NONNULL_END
