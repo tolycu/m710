@@ -52,6 +52,9 @@
 		94C261312816CA7E0075B013 /* Sport_GlobalConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2612E2816CA7E0075B013 /* Sport_GlobalConfigModel.m */; };
 		94C261322816CA7E0075B013 /* Sport_ServerVPNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2612F2816CA7E0075B013 /* Sport_ServerVPNModel.m */; };
 		94C261352816CBB30075B013 /* M710_ServerListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C261342816CBB30075B013 /* M710_ServerListCell.m */; };
+		94C2613828179D190075B013 /* SelectNavgidueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2613728179D190075B013 /* SelectNavgidueView.m */; };
+		94C2613B2817DF070075B013 /* M710_EditQRController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2613A2817DF070075B013 /* M710_EditQRController.m */; };
+		94C2613E2817F9920075B013 /* CreatUrlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2613D2817F9920075B013 /* CreatUrlCell.m */; };
 		F69862EB9F892740D82FFB73 /* Pods_m710qrcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88FFEB34A023A0B4A0E12ED /* Pods_m710qrcode.framework */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +149,12 @@
 		94C261302816CA7E0075B013 /* Sport_GlobalConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport_GlobalConfigModel.h; sourceTree = "<group>"; };
 		94C261332816CBB30075B013 /* M710_ServerListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_ServerListCell.h; sourceTree = "<group>"; };
 		94C261342816CBB30075B013 /* M710_ServerListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_ServerListCell.m; sourceTree = "<group>"; };
+		94C2613628179D190075B013 /* SelectNavgidueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectNavgidueView.h; sourceTree = "<group>"; };
+		94C2613728179D190075B013 /* SelectNavgidueView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectNavgidueView.m; sourceTree = "<group>"; };
+		94C261392817DF070075B013 /* M710_EditQRController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_EditQRController.h; sourceTree = "<group>"; };
+		94C2613A2817DF070075B013 /* M710_EditQRController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_EditQRController.m; sourceTree = "<group>"; };
+		94C2613C2817F9920075B013 /* CreatUrlCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreatUrlCell.h; sourceTree = "<group>"; };
+		94C2613D2817F9920075B013 /* CreatUrlCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreatUrlCell.m; sourceTree = "<group>"; };
 		D88FFEB34A023A0B4A0E12ED /* Pods_m710qrcode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_m710qrcode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -217,6 +226,8 @@
 				94A992FC281145FB00F3E521 /* view */,
 				94A992E22811279A00F3E521 /* M710_CreatViewController.h */,
 				94A992E32811279A00F3E521 /* M710_CreatViewController.m */,
+				94C261392817DF070075B013 /* M710_EditQRController.h */,
+				94C2613A2817DF070075B013 /* M710_EditQRController.m */,
 				94A9930A28127CD200F3E521 /* M710_CreatResultController.h */,
 				94A9930B28127CD200F3E521 /* M710_CreatResultController.m */,
 			);
@@ -344,6 +355,8 @@
 				94A99302281146DD00F3E521 /* M710_TextField.m */,
 				94A99300281146DD00F3E521 /* M710_TextView.h */,
 				94A99301281146DD00F3E521 /* M710_TextView.m */,
+				94C2613C2817F9920075B013 /* CreatUrlCell.h */,
+				94C2613D2817F9920075B013 /* CreatUrlCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -353,6 +366,8 @@
 			children = (
 				94A993072811556D00F3E521 /* HistoryCellView.h */,
 				94A993082811556D00F3E521 /* HistoryCellView.m */,
+				94C2613628179D190075B013 /* SelectNavgidueView.h */,
+				94C2613728179D190075B013 /* SelectNavgidueView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -561,6 +576,7 @@
 				94A99305281146DD00F3E521 /* M710_TextField.m in Sources */,
 				94A992DB281107A500F3E521 /* UIView+LBExtension.m in Sources */,
 				94C2612B2816C96C0075B013 /* M710_ServerListController.m in Sources */,
+				94C2613E2817F9920075B013 /* CreatUrlCell.m in Sources */,
 				94A992EC281139CB00F3E521 /* BaseNavController.m in Sources */,
 				94C2611A28156BCB0075B013 /* SportAppConfig.m in Sources */,
 				94A992CF2810073700F3E521 /* M710_ScanViewController.m in Sources */,
@@ -575,9 +591,11 @@
 				94A992B1280FEE5900F3E521 /* AppDelegate.m in Sources */,
 				94A992F428113A5B00F3E521 /* XCWebViewController.m in Sources */,
 				94A9930C28127CD200F3E521 /* M710_CreatResultController.m in Sources */,
+				94C2613B2817DF070075B013 /* M710_EditQRController.m in Sources */,
 				94A992F528113A5B00F3E521 /* NSObject+TopViewController.m in Sources */,
 				94A992E1281108E300F3E521 /* M710_HistoryViewController.m in Sources */,
 				94C2610D281559280075B013 /* Sport_CardModel.m in Sources */,
+				94C2613828179D190075B013 /* SelectNavgidueView.m in Sources */,
 				94A992ED281139CB00F3E521 /* M710_BaseViewController.m in Sources */,
 				94C26107281558D20075B013 /* Sport_GlobalMananger.m in Sources */,
 				94C2612228164A2D0075B013 /* M710_VpnResultController.m in Sources */,

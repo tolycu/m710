@@ -7,6 +7,7 @@
 
 #import "M710_CreatViewController.h"
 #import "M710_FolderViewCell.h"
+#import "M710_EditQRController.h"
 #import "M710_CreatResultController.h"
 
 @interface M710_CreatViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -34,20 +35,26 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    M710_CreatResultController *vc = [[M710_CreatResultController alloc] init];
-//    if (indexPath.item == 0) {
-//        vc.qrType = DataStringQRType_url;
-//    }else if (indexPath.item == 1){
-//        vc.qrType = DataStringQRType_text;
-//    }else if (indexPath.item == 2){
-//        vc.qrType = DataStringQRType_vcard;
-//    }else if (indexPath.item == 3){
-//        vc.qrType = DataStringQRType_mecard;
-//    }else if (indexPath.item == 4){
-//        vc.qrType = DataStringQRType_phone;
-//    }else if (indexPath.item == 5){
-//        vc.qrType = DataStringQRType_sms;
-//    }
+    M710_EditQRController *vc = [[M710_EditQRController alloc] init];
+    if (indexPath.item == 0) {
+        vc.type = DataStringQRType_card;
+    }else if (indexPath.item == 1){
+        vc.type = DataStringQRType_Twitter;
+    }else if (indexPath.item == 2){
+        vc.type = DataStringQRType_barcode;
+    }else if (indexPath.item == 3){
+        vc.type = DataStringQRType_FB;
+    }else if (indexPath.item == 4){
+        vc.type = DataStringQRType_url;
+    }else if (indexPath.item == 5){
+        vc.type = DataStringQRType_text;
+    }else if (indexPath.item == 6){
+        vc.type = DataStringQRType_wifi;
+    }else if (indexPath.item == 7){
+        vc.type = DataStringQRType_whatsapp;
+    }else if (indexPath.item == 8){
+        vc.type = DataStringQRType_phone;
+    }
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

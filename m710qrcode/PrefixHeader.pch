@@ -26,7 +26,7 @@
 #import "Sport_GlobalMananger.h"
 #import "Sport_ServerVPNModel.h"
 #import "Sport_GlobalConfigModel.h"
-
+#import "SportAppConfig.h"
 
 //kWeakSelf
 #define kWeakSelf(type)         __weak typeof(type) weak##type = type;

@@ -10,10 +10,13 @@
 
 
 static NSString *const QR_Phone = @"TEL"; /*  电话 */
-static NSString *const QR_MECARD = @"MECARD"; /* 联系人Me Card */
 static NSString *const QR_VCARD = @"VCARD"; /* 联系人 VCard */
-static NSString *const QR_SMS = @"SMS"; /* 短信 */
-static NSString *const QR_GEO = @"GEO"; /* 地址 */
+static NSString *const QR_TwitterName = @"twitter://user?screen_name="; /* twitter name */
+static NSString *const QR_TwitterUrl = @"https://twitter.com/"; /* twitter url */
+static NSString *const QR_fbID = @"fb://profile/"; /* twitter name */
+static NSString *const QR_fbUrl = @"https://www.facebook.com/profile.php?id="; /* twitter url */
+
+static NSString *const QR_Whatsapp = @"whatsapp:send?phone="; /* whatsapp */
 static NSString *const QR_HTTP = @"HTTP"; /* 网址 */
 static NSString *const QR_PRODUCT = @"PRODUCT"; /* 产品 */
 
@@ -42,49 +45,20 @@ static NSString *const APP_Photo_Alert = @"\"ScannerLab\"Would Like to Access th
 // 通信录权限提示
 static NSString *const APP_Contacts_Alert = @"\"ScannerLab\"Would Like to Access the Contacts";
 
-
+// 第一次弹出相机权限
+static NSString *const APP_Camera = @"APP_Camera";
 
 // 订阅广告
 typedef NS_ENUM(NSUInteger, DataStringQRType) {
     DataStringQRType_text = 0,
     DataStringQRType_phone = 1,
-    DataStringQRType_mecard = 2,
-    DataStringQRType_vcard = 3,
-    DataStringQRType_url = 4,
-    DataStringQRType_geo = 5,
-    DataStringQRType_sms = 6,
-    //条形码
-    DataStringQRType_product = 7,
-    //vip 类型
-    DataStringQRType_FB = 8,
-    DataStringQRType_Ins = 9,
-    DataStringQRType_Pinter = 10,
-    DataStringQRType_Twitter = 11,
-    DataStringQRType_YouTube = 12,
+    DataStringQRType_card = 2,
+    DataStringQRType_url = 3,
+    DataStringQRType_wifi = 4,
+    DataStringQRType_barcode = 5,
+    DataStringQRType_FB = 6,
+    DataStringQRType_whatsapp = 7,
+    DataStringQRType_Twitter = 8,
 };
-
-typedef NS_ENUM(NSUInteger, HistoryType) {
-    HistoryType_Web_Scan = 0,
-    HistoryType_Web_Creat = 1,
-    
-    HistoryType_Text_Scan = 2,
-    HistoryType_Text_Creat = 3,
-    
-    HistoryType_Card_Scan = 4,
-    HistoryType_Card_Creat = 5,
-    
-    HistoryType_Phone_Scan = 6,
-    HistoryType_Phone_Creat = 7,
-    
-    HistoryType_Sms_Scan = 8,
-    HistoryType_Sms_Creat = 9,
-    
-    HistoryType_Geo_Scan = 10,
-    HistoryType_Geo_Creat = 11,
-    
-    HistoryType_Product_Scan = 12,
-    HistoryType_Product_Creat = 13,
-};
-
 
 #endif /* M710_Contants_h */

@@ -15,9 +15,11 @@
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         self.font = [UIFont systemFontOfSize:16];
-        self.textColor = [UIColor colorWithString:@"#1a1aa1a"];
-        self.layer.cornerRadius = 14.f;
+        self.textColor = [UIColor colorWithString:@"#666666"];
+        self.layer.cornerRadius = 5.f;
         self.layer.masksToBounds = YES;
+        self.layer.borderWidth = 1.f;
+        self.layer.borderColor = [UIColor colorWithString:@"f0f0f0"].CGColor;
     }
     return self;
 }

@@ -85,18 +85,16 @@
     if (tempArr.count > 1) {
         if ([header isEqualToString:QR_Phone]) {
             return DataStringQRType_phone;
-        }else if([string jk_containsaString:QR_MECARD]){
-            return DataStringQRType_mecard;
         }else if ([string jk_containsaString:QR_VCARD]){
-            return DataStringQRType_vcard;
-        }else if ([header jk_containsaString:QR_SMS]){
-            return DataStringQRType_sms;
-        }else if ([header jk_containsaString:QR_GEO]){
-            return DataStringQRType_geo;
+            return DataStringQRType_card;
+        }else if ([header jk_containsaString:@"WIFI"]){
+            return DataStringQRType_wifi;
+        }else if ([header jk_containsaString:QR_Whatsapp]){
+            return DataStringQRType_whatsapp;
         }else if ([header jk_containsaString:QR_HTTP]){
             return DataStringQRType_url;
         }else if ([header jk_containsaString:QR_PRODUCT]){
-            return DataStringQRType_product;
+            return DataStringQRType_barcode;
         }
     }
     return DataStringQRType_text;
@@ -108,17 +106,17 @@
         return @"Text";
     }else if(type == DataStringQRType_phone){
         return @"Phone";
-    }else if(type == DataStringQRType_mecard){
+    }else if(type == DataStringQRType_card){
         return @"Mecard";
-    }else if(type == DataStringQRType_vcard){
+    }else if(type == DataStringQRType_Twitter){
         return @"Vcard";
     }else if(type == DataStringQRType_url){
         return @"Weblink";
-    }else if(type == DataStringQRType_geo){
+    }else if(type == DataStringQRType_wifi){
         return @"GeoLocation";
-    }else if(type == DataStringQRType_sms){
+    }else if(type == DataStringQRType_whatsapp){
         return @"SMS";
-    }else if(type == DataStringQRType_product){
+    }else if(type == DataStringQRType_barcode){
         return @"Product";
     }
     return @"Other";
@@ -130,42 +128,20 @@
         return @"history_text";
     }else if(type == DataStringQRType_phone){
         return @"history_phone";
-    }else if(type == DataStringQRType_vcard){
+    }else if(type == DataStringQRType_card){
         return @"history_vcard";
-    }else if(type == DataStringQRType_mecard){
+    }else if(type == DataStringQRType_wifi){
         return @"history_vcard";
     }else if(type == DataStringQRType_url){
         return @"history_web";
-    }else if(type == DataStringQRType_geo){
+    }else if(type == DataStringQRType_Twitter){
         return @"history_geo";
-    }else if(type == DataStringQRType_sms){
+    }else if(type == DataStringQRType_whatsapp){
         return @"history_sms";
-    }else if(type == DataStringQRType_product){
+    }else if(type == DataStringQRType_barcode){
         return @"history_product";
     }
     return @"Other";
-}
-
-+ (NSString *)creatHistoryType:(DataStringQRType)type atIndex:(NSInteger)index{
-    if (type == DataStringQRType_text) {
-        return index?@"HistoryType_Text_Scan":@"HistoryType_Text_Creat";
-    }else if(type == DataStringQRType_phone){
-        return index?@"HistoryType_Phone_Scan":@"HistoryType_Phone_Creat";
-    }else if(type == DataStringQRType_vcard){
-        return index?@"HistoryType_Card_Scan":@"HistoryType_Card_Creat";
-    }else if(type == DataStringQRType_mecard){
-        return index?@"HistoryType_Card_Scan":@"HistoryType_Card_Creat";
-    }else if(type == DataStringQRType_url){
-        return index?@"HistoryType_Web_Scan":@"HistoryType_Web_Creat";
-    }else if(type == DataStringQRType_geo){
-        return index?@"HistoryType_Geo_Scan":@"HistoryType_Geo_Creat";
-    }else if(type == DataStringQRType_sms){
-        return index?@"HistoryType_Sms_Scan":@"HistoryType_Sms_Creat";
-    }else if(type == DataStringQRType_product){
-        return index?@"HistoryType_Product_Scan":@"HistoryType_Product_Creat";
-    }else{
-        return @"Other";
-    }
 }
 
 + (BOOL)checkoutDeviceIsiPad{
@@ -701,5 +677,6 @@
     [mutArr insertObject:@{@"resultStr":stringValue,@"dateStr":dateStr} atIndex:0];
     [NSUserDefaults jk_setObject:mutArr forKey:keyStr];
 }
+
 
 @end

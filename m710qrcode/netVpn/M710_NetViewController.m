@@ -7,6 +7,7 @@
 
 #import "M710_NetViewController.h"
 #import "M710_VpnResultController.h"
+#import "M710_ServerListController.h"
 
 #import "M710_VpnConnectView.h"
 #import "M710_ConnectServerView.h"

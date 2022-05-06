@@ -41,7 +41,7 @@
     UILabel *dateTitleLab = [[UILabel alloc] init];
     dateTitleLab.font = [UIFont systemFontOfSize:14];
     dateTitleLab.textColor = [UIColor colorWithString:@"#1A1A1A"];
-    dateTitleLab.text = @"Generate Dat：";
+    dateTitleLab.text = @"Generate Date：";
     [self.contentView addSubview:dateTitleLab];
     [dateTitleLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.qrImg);

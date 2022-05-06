@@ -23,7 +23,8 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return self.dataList.count;
+//    return self.dataList.count;
+    return 10;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -32,7 +33,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     M710_ServerListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"M710_ServerListCell" forIndexPath:indexPath];
-    cell.model = self.dataList[indexPath.section];
+//    cell.model = self.dataList[indexPath.section];
     return cell;
 }
 
@@ -52,7 +53,6 @@
 }
 
 - (void)addSubView_layout{
-    [self hideBackItem];
     [self setTitleStr:@"Node List"];
     
     [self.view addSubview:self.tableView];

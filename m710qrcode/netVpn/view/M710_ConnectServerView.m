@@ -6,6 +6,7 @@
 //
 
 #import "M710_ConnectServerView.h"
+#import "M710_ServerListController.h"
 
 @interface M710_ConnectServerView ()
 
@@ -26,7 +27,9 @@
 }
 
 - (void)moreClick:(UIButton *)button{
-    
+    M710_ServerListController *vc = [[M710_ServerListController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [[self currentController].navigationController pushViewController:vc animated:YES];
 }
 
 - (void)addSubview_layout{

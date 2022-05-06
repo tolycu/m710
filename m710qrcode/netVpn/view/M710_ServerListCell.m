@@ -29,6 +29,9 @@
 
 - (void)addSubview_layout{
     
+    self.contentView.layer.cornerRadius = 10.f;
+    self.contentView.layer.masksToBounds = YES;
+    
     self.countryImg = [[UIImageView alloc] init];
     [self.contentView addSubview:self.countryImg];
     [self.countryImg mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -51,7 +54,7 @@
     
     UILabel *ipTitleLab = [[UILabel alloc] init];
     ipTitleLab.textColor = [UIColor colorWithString:@"#1A1A1A"];
-    self.nameLab.text = @"IP：";
+    ipTitleLab.text = @"IP：";
     ipTitleLab.font = [UIFont systemFontOfSize:14.f];
     [self.contentView addSubview:ipTitleLab];
     [ipTitleLab mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -70,8 +73,8 @@
     }];
     
     self.statusBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.statusBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-    [self.statusBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateSelected];
+    [self.statusBtn setImage:[UIImage imageNamed:@"i_unselected"] forState:UIControlStateNormal];
+    [self.statusBtn setImage:[UIImage imageNamed:@"i_checked"] forState:UIControlStateSelected];
     [self.contentView addSubview:self.statusBtn];
     [self.statusBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.contentView).offset(-20);
@@ -81,6 +84,21 @@
     
     UIImageView *infoImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"server_info"]];
     [self.contentView addSubview:infoImg];
+    [infoImg mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.statusBtn).offset(-80);
+        make.bottom.equalTo(self.contentView).offset(-10);
+        make.width.mas_equalTo(10);
+        make.height.mas_equalTo(8);
+    }];
+    
+    self.pingLab = [[UILabel alloc] init];
+    self.pingLab.font = [UIFont systemFontOfSize:12];
+    self.pingLab.textColor = [UIColor colorWithString:@"#52CCBB"];
+    [self.contentView addSubview:self.pingLab];
+    [self.pingLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(infoImg);
+        make.left.equalTo(infoImg.mas_right).offset(2);
+    }];
     
 }
 

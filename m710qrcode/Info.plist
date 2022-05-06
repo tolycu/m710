@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Granting camera permission, you can scan the QR code and Barcode you need with unlimited, please allow authorization.Don&apos;t worry,we will not colllect and store your information and will not upload it to the server.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Granting album permission, you can save the code to the album and share it with your friends, please allow authorization.Don&apos;t worry,we will not colllect and store your information and will not upload it to the server.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Granting contacts permission, you can save the code to the album and share it with your friends, please allow authorization.Don&apos;t worry,we will not colllect and store your information and will not upload it to the server.</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Our app will NOT track or keep any record of your activities, authorizing tracking however can help us offer no cost services funded by personalized advertising.</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

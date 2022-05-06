@@ -7,7 +7,7 @@
 
 #import "M710_TextView.h"
 
-@interface M710_TextView ()
+@interface M710_TextView ()<UITextViewDelegate>
 
 @end
 
@@ -30,6 +30,11 @@
     self.font = [UIFont systemFontOfSize:15.f];
     self.textColor = [UIColor colorWithString:@"#1A1A1A"];
     self.textContainerInset = UIEdgeInsetsMake(15, 13, 15, 15);
+    self.layer.cornerRadius = 5.f;
+    self.layer.masksToBounds = YES;
+    self.layer.borderWidth = 1.f;
+    self.layer.borderColor = [UIColor colorWithString:@"f0f0f0"].CGColor;
+    self.delegate = self;
     
     self.placeLab = [[UILabel alloc] init];
     self.placeLab.font = [UIFont systemFontOfSize:15 weight:UIFontWeightMedium];
