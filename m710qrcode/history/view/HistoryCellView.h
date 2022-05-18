@@ -8,8 +8,11 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+typedef void (^DeleteIndexClick)(void);
 @interface HistoryCellView : UITableViewCell
+
+@property (nonatomic ,strong) NSDictionary *dataDict;
+@property (nonatomic ,copy) DeleteIndexClick deleteBlock;
 
 @end
 

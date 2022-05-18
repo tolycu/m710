@@ -6,6 +6,7 @@
 //
 
 #import "M710_AboutViewController.h"
+#import "Expert_WebViewController.h"
 #import "SettingViewCell.h"
 
 @interface M710_AboutViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -51,7 +52,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 0) {
+        [self pushWebWithUrl:privacy_url];
+    }else if (indexPath.section == 1){
+        [self pushWebWithUrl:terms_url];
+    }
 }
+
+- (void)pushWebWithUrl:(NSString *)url{
+    Expert_WebViewController *vc = [[Expert_WebViewController alloc] init];
+    vc.url = url;
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
 
 - (void)addSubView_layout{
     [self setTitleStr:@"Settings"];

@@ -1,0 +1,26 @@
+{
+    
+    "connectModes" : [
+    {
+      "mode" : "1",
+      "configs" : [
+        {
+          "type" : "2",
+          "timeout" : "",
+        }
+      ]
+    },
+    {
+      "mode" : "1",
+      "configs" : [
+        {
+          "type" : "1",
+          "timeout" : "",
+        }
+      ]
+    },
+    {
+      "mode" : "2"
+    }
+  ]
+}

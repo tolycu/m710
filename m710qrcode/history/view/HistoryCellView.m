@@ -6,10 +6,13 @@
 //
 
 #import "HistoryCellView.h"
+#import "Expert_QRManager.h"
 
 @interface HistoryCellView ()
 
 @property (nonatomic ,strong) UIImageView *qrImg;
+@property (nonatomic ,strong) UIImage *qrcode;
+
 @property (nonatomic ,strong) UILabel *dateLab;
 @property (nonatomic ,strong) UILabel *resultLab;
 @property (nonatomic ,strong) UIImageView *shareImg;
@@ -26,9 +29,18 @@
     return self;
 }
 
+- (void)setDataDict:(NSDictionary *)dataDict{
+    if (dataDict) {
+        _dataDict = dataDict;
+        self.qrcode = [Expert_QRManager createQRimageString:dataDict[@"resultStr"] sizeWidth:127 fillColor:[UIColor blackColor]];
+        self.qrImg.image = self.qrcode;
+        self.dateLab.text = dataDict[@"dateStr"];
+        self.resultLab.text = dataDict[@"resultStr"];
+    }
+}
+
 - (void)addSubViews_layout{
     self.qrImg = [[UIImageView alloc] init];
-    self.qrImg.backgroundColor = [UIColor redColor];
     [self.contentView addSubview:self.qrImg];
     [self.qrImg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView);
@@ -51,7 +63,6 @@
     self.dateLab = [[UILabel alloc] init];
     self.dateLab.textColor = [UIColor colorWithString:@"#1A1A1A"];
     self.dateLab.font = [UIFont systemFontOfSize:12.f];
-    self.dateLab.text = @"03/23/2022";
     [self.contentView addSubview:self.dateLab];
     [self.dateLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(dateTitleLab);
@@ -71,7 +82,6 @@
     self.resultLab = [[UILabel alloc] init];
     self.resultLab.textColor = [UIColor colorWithString:@"#1A1A1A"];
     self.resultLab.font = [UIFont systemFontOfSize:14.f];
-    self.resultLab.text = @"baidu.com";
     [self.contentView addSubview:self.resultLab];
     [self.resultLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(resTitleLab);
@@ -80,6 +90,10 @@
     }];
     
     self.deleteImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"history_delete"]];
+    self.deleteImg.userInteractionEnabled = YES;
+    [self.deleteImg jk_addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
+        [self deleteQRHistory];
+    }];
     [self.contentView addSubview:self.deleteImg];
     [self.deleteImg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.contentView).offset(-7);
@@ -88,6 +102,10 @@
     }];
     
     self.shareImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"history_share"]];
+    self.shareImg.userInteractionEnabled = YES;
+    [self.shareImg jk_addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
+        [self shareClick];
+    }];
     [self.contentView addSubview:self.shareImg];
     [self.shareImg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.deleteImg);
@@ -95,9 +113,16 @@
         make.height.mas_equalTo(30);
         make.width.mas_equalTo(65);
     }];
-    
 }
 
+- (void)shareClick{
+    [TOOL_MANAGE startShareImage:self.qrcode];
+}
 
+- (void)deleteQRHistory{
+    if (self.deleteBlock) {
+        self.deleteBlock();
+    }
+}
 
 @end

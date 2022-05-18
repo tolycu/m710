@@ -6,8 +6,11 @@
 //
 
 #import "M710_VpnResultController.h"
+#import "HomeAdapter.h"
 
 @interface M710_VpnResultController ()
+
+@property (nonatomic ,strong) Expert_ServerVPNModel *serverModel;
 
 @end
 
@@ -15,11 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.serverModel = Adapter_MANAGE.bestServer;
     [self addSubView_layout];
 }
 
 - (void)addSubView_layout{
-    [self hideBackItem];
     [self setTitleStr:@"Net Tool"];
     
     UILabel *statusLab = [[UILabel alloc] init];
@@ -46,7 +49,7 @@
     UILabel *ipLab = [[UILabel alloc] init];
     ipLab.font = [UIFont systemFontOfSize:16 weight:UIFontWeightMedium];
     ipLab.textColor = [UIColor colorWithString:@"#1A1A1A"];
-    ipLab.text = @"IP: 192.168.1.1";
+    ipLab.text = [NSString stringWithFormat: @"IP: %@",self.serverModel.expert_host];
     [self.view addSubview:ipLab];
     [ipLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
@@ -56,18 +59,12 @@
     UILabel *nameLab = [[UILabel alloc] init];
     nameLab.font = [UIFont systemFontOfSize:16 weight:UIFontWeightMedium];
     nameLab.textColor = [UIColor colorWithString:@"#1A1A1A"];
-    nameLab.text = @"Node：US-New York";
+    nameLab.text = [NSString stringWithFormat: @"Node：%@",self.serverModel.expert_alisaName];
     [self.view addSubview:nameLab];
     [nameLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
         make.top.equalTo(ipLab.mas_bottom).offset(10);
     }];
-    
-    
-    
-    
-    
-    
 }
 
 @end

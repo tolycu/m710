@@ -7,6 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B4F865A5F45188E66306891 /* Pods_PacketTunnel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9440D78A41E17EFAE4DBDF80 /* Pods_PacketTunnel.framework */; };
+		949B560D282B5BF40062F563 /* Expert_WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B560C282B5BF40062F563 /* Expert_WebViewController.m */; };
+		949B5615282BB38E0062F563 /* AESencrytDecrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5612282BB38E0062F563 /* AESencrytDecrypt.m */; };
+		949B5616282BB38E0062F563 /* XCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5613282BB38E0062F563 /* XCClient.m */; };
+		949B5617282BB38E0062F563 /* HomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5614282BB38E0062F563 /* HomeAdapter.m */; };
+		949B563E282BB8430062F563 /* NSString+SOneExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5620282BB8430062F563 /* NSString+SOneExtension.m */; };
+		949B563F282BB8430062F563 /* NSData+SOneExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5622282BB8430062F563 /* NSData+SOneExtension.m */; };
+		949B5640282BB8430062F563 /* SOneVPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5626282BB8430062F563 /* SOneVPTool.m */; };
+		949B5641282BB8430062F563 /* SOneVPConnectDataInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B562B282BB8430062F563 /* SOneVPConnectDataInfo.m */; };
+		949B5642282BB8430062F563 /* SOneServerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B562D282BB8430062F563 /* SOneServerModel.m */; };
+		949B5643282BB8430062F563 /* SOneVPCertModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5630282BB8430062F563 /* SOneVPCertModel.m */; };
+		949B5644282BB8430062F563 /* SOneVPIkeV2Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5631282BB8430062F563 /* SOneVPIkeV2Model.m */; };
+		949B5645282BB8430062F563 /* SOneVPConnectModeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5632282BB8430062F563 /* SOneVPConnectModeModel.m */; };
+		949B5646282BB8430062F563 /* SOneVPUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5638282BB8430062F563 /* SOneVPUserDefaults.m */; };
+		949B5647282BB8430062F563 /* SOneCertManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5639282BB8430062F563 /* SOneCertManage.m */; };
+		949B5648282BB8430062F563 /* SOneVPManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B563A282BB8430062F563 /* SOneVPManage.m */; };
+		949B5649282BB8430062F563 /* SOneVPTransferManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B563D282BB8430062F563 /* SOneVPTransferManage.m */; };
+		949B5650282BB90C0062F563 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949B564F282BB90C0062F563 /* NetworkExtension.framework */; };
+		949B5654282BB90C0062F563 /* PacketTunnelProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5653282BB90C0062F563 /* PacketTunnelProvider.m */; };
+		949B5659282BB90C0062F563 /* PacketTunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 949B564E282BB90C0062F563 /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		949B565F282BB93B0062F563 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949B564F282BB90C0062F563 /* NetworkExtension.framework */; };
+		949B5660282BBF740062F563 /* SOneVPTransferManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B563D282BB8430062F563 /* SOneVPTransferManage.m */; };
+		949B5661282BBF7F0062F563 /* SOneVPConnectDataInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B562B282BB8430062F563 /* SOneVPConnectDataInfo.m */; };
+		949B5662282BBF8F0062F563 /* NSString+SOneExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5620282BB8430062F563 /* NSString+SOneExtension.m */; };
+		949B5667282D04310062F563 /* PingConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5666282D04310062F563 /* PingConfig.m */; };
+		949B5669282DFD940062F563 /* kRemoteCertFileName in Resources */ = {isa = PBXBuildFile; fileRef = 949B5668282DFD940062F563 /* kRemoteCertFileName */; };
+		949B566B282DFDAB0062F563 /* AutoModeConfig.txt in Resources */ = {isa = PBXBuildFile; fileRef = 949B566A282DFDAB0062F563 /* AutoModeConfig.txt */; };
+		949B5676282E56550062F563 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 949B566D282E56550062F563 /* index.html */; };
+		949B5677282E56550062F563 /* index.css in Resources */ = {isa = PBXBuildFile; fileRef = 949B566E282E56550062F563 /* index.css */; };
+		949B5678282E56550062F563 /* btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 949B5670282E56550062F563 /* btn.png */; };
+		949B5679282E56550062F563 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 949B5671282E56550062F563 /* logo.png */; };
+		949B567A282E56550062F563 /* bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 949B5672282E56550062F563 /* bg1.png */; };
+		949B567B282E56550062F563 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 949B5673282E56550062F563 /* bg2.png */; };
+		949B567C282E56550062F563 /* Service.html in Resources */ = {isa = PBXBuildFile; fileRef = 949B5674282E56550062F563 /* Service.html */; };
+		949B567D282E56550062F563 /* Privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = 949B5675282E56550062F563 /* Privacy.html */; };
+		949B567F282E57480062F563 /* FirstPrivacy.html in Resources */ = {isa = PBXBuildFile; fileRef = 949B567E282E57480062F563 /* FirstPrivacy.html */; };
+		949B5682282E58B90062F563 /* Sport_PrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5681282E58B90062F563 /* Sport_PrivacyViewController.m */; };
+		949B5685282E5B940062F563 /* Sport_PrivacyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5683282E5B940062F563 /* Sport_PrivacyView.m */; };
 		94A992B1280FEE5900F3E521 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A992B0280FEE5900F3E521 /* AppDelegate.m */; };
 		94A992BA280FEE5900F3E521 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A992B8280FEE5900F3E521 /* Main.storyboard */; };
 		94A992BC280FEE5900F3E521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A992BB280FEE5900F3E521 /* Assets.xcassets */; };
@@ -22,7 +60,6 @@
 		94A992E7281127C800F3E521 /* M710_NetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A992E6281127C800F3E521 /* M710_NetViewController.m */; };
 		94A992EC281139CB00F3E521 /* BaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A992E8281139CB00F3E521 /* BaseNavController.m */; };
 		94A992ED281139CB00F3E521 /* M710_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A992EB281139CB00F3E521 /* M710_BaseViewController.m */; };
-		94A992F428113A5B00F3E521 /* XCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A992F028113A5B00F3E521 /* XCWebViewController.m */; };
 		94A992F528113A5B00F3E521 /* NSObject+TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A992F128113A5B00F3E521 /* NSObject+TopViewController.m */; };
 		94A992FB2811406300F3E521 /* M710_LaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A992FA2811406300F3E521 /* M710_LaunchController.m */; };
 		94A99303281146DD00F3E521 /* M710_FolderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A992FF281146DD00F3E521 /* M710_FolderViewCell.m */; };
@@ -36,9 +73,9 @@
 		94C260FC281520980075B013 /* M710_RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C260FB281520980075B013 /* M710_RateView.m */; };
 		94C260FF28153EF20075B013 /* M710_ClearCacheView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C260FE28153EF20075B013 /* M710_ClearCacheView.m */; };
 		94C26103281555170075B013 /* M710_VpnConnectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C26102281555170075B013 /* M710_VpnConnectView.m */; };
-		94C26107281558D20075B013 /* Sport_GlobalMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C26105281558D20075B013 /* Sport_GlobalMananger.m */; };
-		94C2610A281559160075B013 /* Sport_QRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C26109281559160075B013 /* Sport_QRManager.m */; };
-		94C2610D281559280075B013 /* Sport_CardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2610B281559280075B013 /* Sport_CardModel.m */; };
+		94C26107281558D20075B013 /* Expert_GlobalMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C26105281558D20075B013 /* Expert_GlobalMananger.m */; };
+		94C2610A281559160075B013 /* Expert_QRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C26109281559160075B013 /* Expert_QRManager.m */; };
+		94C2610D281559280075B013 /* Expert_CardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2610B281559280075B013 /* Expert_CardModel.m */; };
 		94C261152815595C0075B013 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2610F2815595C0075B013 /* NSDate+Helper.m */; };
 		94C261162815595C0075B013 /* PingFoundtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C261102815595C0075B013 /* PingFoundtion.m */; };
 		94C261172815595C0075B013 /* PingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C261132815595C0075B013 /* PingHelper.m */; };
@@ -49,18 +86,106 @@
 		94C2612528167BEF0075B013 /* M710_ConnectServerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2612428167BEF0075B013 /* M710_ConnectServerView.m */; };
 		94C26128281682E90075B013 /* M710_ConnectTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C26127281682E90075B013 /* M710_ConnectTypeView.m */; };
 		94C2612B2816C96C0075B013 /* M710_ServerListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2612A2816C96C0075B013 /* M710_ServerListController.m */; };
-		94C261312816CA7E0075B013 /* Sport_GlobalConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2612E2816CA7E0075B013 /* Sport_GlobalConfigModel.m */; };
-		94C261322816CA7E0075B013 /* Sport_ServerVPNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2612F2816CA7E0075B013 /* Sport_ServerVPNModel.m */; };
+		94C261312816CA7E0075B013 /* Expert_GlobalConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2612E2816CA7E0075B013 /* Expert_GlobalConfigModel.m */; };
+		94C261322816CA7E0075B013 /* Expert_ServerVPNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2612F2816CA7E0075B013 /* Expert_ServerVPNModel.m */; };
 		94C261352816CBB30075B013 /* M710_ServerListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C261342816CBB30075B013 /* M710_ServerListCell.m */; };
 		94C2613828179D190075B013 /* SelectNavgidueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2613728179D190075B013 /* SelectNavgidueView.m */; };
 		94C2613B2817DF070075B013 /* M710_EditQRController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2613A2817DF070075B013 /* M710_EditQRController.m */; };
 		94C2613E2817F9920075B013 /* CreatUrlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2613D2817F9920075B013 /* CreatUrlCell.m */; };
+		94F85988283399A50028AA3D /* default_serverList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 94F85987283399A50028AA3D /* default_serverList.txt */; };
 		F69862EB9F892740D82FFB73 /* Pods_m710qrcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88FFEB34A023A0B4A0E12ED /* Pods_m710qrcode.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		949B5657282BB90C0062F563 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94A992A4280FEE5900F3E521 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 949B564D282BB90C0062F563;
+			remoteInfo = PacketTunnel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		949B565D282BB90C0062F563 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				949B5659282BB90C0062F563 /* PacketTunnel.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		042FE9A1A449FE656F75BFA5 /* Pods-PacketTunnel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketTunnel.debug.xcconfig"; path = "Target Support Files/Pods-PacketTunnel/Pods-PacketTunnel.debug.xcconfig"; sourceTree = "<group>"; };
 		5B0DA7E52CFB554378F6BD9B /* Pods-m710qrcode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-m710qrcode.release.xcconfig"; path = "Target Support Files/Pods-m710qrcode/Pods-m710qrcode.release.xcconfig"; sourceTree = "<group>"; };
+		781859DF46F3DD8647A4CF07 /* Pods-PacketTunnel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketTunnel.release.xcconfig"; path = "Target Support Files/Pods-PacketTunnel/Pods-PacketTunnel.release.xcconfig"; sourceTree = "<group>"; };
 		8C3566B8BE6E31423275C0CA /* Pods-m710qrcode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-m710qrcode.debug.xcconfig"; path = "Target Support Files/Pods-m710qrcode/Pods-m710qrcode.debug.xcconfig"; sourceTree = "<group>"; };
+		9440D78A41E17EFAE4DBDF80 /* Pods_PacketTunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PacketTunnel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		949B560B282B5BEF0062F563 /* Expert_WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expert_WebViewController.h; sourceTree = "<group>"; };
+		949B560C282B5BF40062F563 /* Expert_WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expert_WebViewController.m; sourceTree = "<group>"; };
+		949B560F282BB38E0062F563 /* AESencrytDecrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESencrytDecrypt.h; sourceTree = "<group>"; };
+		949B5610282BB38E0062F563 /* XCClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCClient.h; sourceTree = "<group>"; };
+		949B5611282BB38E0062F563 /* HomeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeAdapter.h; sourceTree = "<group>"; };
+		949B5612282BB38E0062F563 /* AESencrytDecrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESencrytDecrypt.m; sourceTree = "<group>"; };
+		949B5613282BB38E0062F563 /* XCClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCClient.m; sourceTree = "<group>"; };
+		949B5614282BB38E0062F563 /* HomeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeAdapter.m; sourceTree = "<group>"; };
+		949B5620282BB8430062F563 /* NSString+SOneExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SOneExtension.m"; sourceTree = "<group>"; };
+		949B5621282BB8430062F563 /* SOneVPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOneVPTool.h; sourceTree = "<group>"; };
+		949B5622282BB8430062F563 /* NSData+SOneExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SOneExtension.m"; sourceTree = "<group>"; };
+		949B5623282BB8430062F563 /* SOneVPLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOneVPLog.h; sourceTree = "<group>"; };
+		949B5624282BB8430062F563 /* NSString+SOneExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SOneExtension.h"; sourceTree = "<group>"; };
+		949B5625282BB8430062F563 /* NSData+SOneExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SOneExtension.h"; sourceTree = "<group>"; };
+		949B5626282BB8430062F563 /* SOneVPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOneVPTool.m; sourceTree = "<group>"; };
+		949B5627282BB8430062F563 /* SOneVPMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOneVPMacros.h; sourceTree = "<group>"; };
+		949B5628282BB8430062F563 /* SOneCertManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOneCertManage.h; sourceTree = "<group>"; };
+		949B562A282BB8430062F563 /* SOneVPConnectDataInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOneVPConnectDataInfo.h; sourceTree = "<group>"; };
+		949B562B282BB8430062F563 /* SOneVPConnectDataInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOneVPConnectDataInfo.m; sourceTree = "<group>"; };
+		949B562D282BB8430062F563 /* SOneServerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOneServerModel.m; sourceTree = "<group>"; };
+		949B562E282BB8430062F563 /* SOneVPConnectModeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOneVPConnectModeModel.h; sourceTree = "<group>"; };
+		949B562F282BB8430062F563 /* SOneVPIkeV2Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOneVPIkeV2Model.h; sourceTree = "<group>"; };
+		949B5630282BB8430062F563 /* SOneVPCertModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOneVPCertModel.m; sourceTree = "<group>"; };
+		949B5631282BB8430062F563 /* SOneVPIkeV2Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOneVPIkeV2Model.m; sourceTree = "<group>"; };
+		949B5632282BB8430062F563 /* SOneVPConnectModeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOneVPConnectModeModel.m; sourceTree = "<group>"; };
+		949B5633282BB8430062F563 /* SOneServerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOneServerModel.h; sourceTree = "<group>"; };
+		949B5634282BB8430062F563 /* SOneVPCertModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOneVPCertModel.h; sourceTree = "<group>"; };
+		949B5635282BB8430062F563 /* SOneVPManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOneVPManage.h; sourceTree = "<group>"; };
+		949B5637282BB8430062F563 /* SOneVPUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOneVPUserDefaults.h; sourceTree = "<group>"; };
+		949B5638282BB8430062F563 /* SOneVPUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOneVPUserDefaults.m; sourceTree = "<group>"; };
+		949B5639282BB8430062F563 /* SOneCertManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOneCertManage.m; sourceTree = "<group>"; };
+		949B563A282BB8430062F563 /* SOneVPManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOneVPManage.m; sourceTree = "<group>"; };
+		949B563C282BB8430062F563 /* SOneVPTransferManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOneVPTransferManage.h; sourceTree = "<group>"; };
+		949B563D282BB8430062F563 /* SOneVPTransferManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOneVPTransferManage.m; sourceTree = "<group>"; };
+		949B564E282BB90C0062F563 /* PacketTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		949B564F282BB90C0062F563 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		949B5652282BB90C0062F563 /* PacketTunnelProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketTunnelProvider.h; sourceTree = "<group>"; };
+		949B5653282BB90C0062F563 /* PacketTunnelProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PacketTunnelProvider.m; sourceTree = "<group>"; };
+		949B5655282BB90C0062F563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		949B5656282BB90C0062F563 /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
+		949B565E282BB9200062F563 /* m710qrcode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = m710qrcode.entitlements; sourceTree = "<group>"; };
+		949B5663282BC0120062F563 /* SOneLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOneLog.h; sourceTree = "<group>"; };
+		949B5664282BC0280062F563 /* PacketTunnel_VPMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketTunnel_VPMacro.h; sourceTree = "<group>"; };
+		949B5665282D04300062F563 /* PingConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingConfig.h; sourceTree = "<group>"; };
+		949B5666282D04310062F563 /* PingConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingConfig.m; sourceTree = "<group>"; };
+		949B5668282DFD940062F563 /* kRemoteCertFileName */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kRemoteCertFileName; sourceTree = "<group>"; };
+		949B566A282DFDAB0062F563 /* AutoModeConfig.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AutoModeConfig.txt; sourceTree = "<group>"; };
+		949B566D282E56550062F563 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		949B566E282E56550062F563 /* index.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = index.css; sourceTree = "<group>"; };
+		949B5670282E56550062F563 /* btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn.png; sourceTree = "<group>"; };
+		949B5671282E56550062F563 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		949B5672282E56550062F563 /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg1.png; sourceTree = "<group>"; };
+		949B5673282E56550062F563 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
+		949B5674282E56550062F563 /* Service.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Service.html; sourceTree = "<group>"; };
+		949B5675282E56550062F563 /* Privacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Privacy.html; sourceTree = "<group>"; };
+		949B567E282E57480062F563 /* FirstPrivacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = FirstPrivacy.html; sourceTree = "<group>"; };
+		949B5680282E58B90062F563 /* Sport_PrivacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport_PrivacyViewController.h; sourceTree = "<group>"; };
+		949B5681282E58B90062F563 /* Sport_PrivacyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport_PrivacyViewController.m; sourceTree = "<group>"; };
+		949B5683282E5B940062F563 /* Sport_PrivacyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport_PrivacyView.m; sourceTree = "<group>"; };
+		949B5684282E5B940062F563 /* Sport_PrivacyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport_PrivacyView.h; sourceTree = "<group>"; };
 		94A992AC280FEE5900F3E521 /* m710qrcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = m710qrcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A992AF280FEE5900F3E521 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94A992B0280FEE5900F3E521 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,10 +215,8 @@
 		94A992E9281139CB00F3E521 /* M710_BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M710_BaseViewController.h; sourceTree = "<group>"; };
 		94A992EA281139CB00F3E521 /* BaseNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavController.h; sourceTree = "<group>"; };
 		94A992EB281139CB00F3E521 /* M710_BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M710_BaseViewController.m; sourceTree = "<group>"; };
-		94A992F028113A5B00F3E521 /* XCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCWebViewController.m; sourceTree = "<group>"; };
 		94A992F128113A5B00F3E521 /* NSObject+TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TopViewController.m"; sourceTree = "<group>"; };
 		94A992F228113A5B00F3E521 /* NSObject+TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TopViewController.h"; sourceTree = "<group>"; };
-		94A992F328113A5B00F3E521 /* XCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCWebViewController.h; sourceTree = "<group>"; };
 		94A992F728113B3E00F3E521 /* M710_Contants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_Contants.h; sourceTree = "<group>"; };
 		94A992F92811406300F3E521 /* M710_LaunchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_LaunchController.h; sourceTree = "<group>"; };
 		94A992FA2811406300F3E521 /* M710_LaunchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_LaunchController.m; sourceTree = "<group>"; };
@@ -119,12 +242,12 @@
 		94C260FE28153EF20075B013 /* M710_ClearCacheView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_ClearCacheView.m; sourceTree = "<group>"; };
 		94C26101281555170075B013 /* M710_VpnConnectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_VpnConnectView.h; sourceTree = "<group>"; };
 		94C26102281555170075B013 /* M710_VpnConnectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_VpnConnectView.m; sourceTree = "<group>"; };
-		94C26105281558D20075B013 /* Sport_GlobalMananger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport_GlobalMananger.m; sourceTree = "<group>"; };
-		94C26106281558D20075B013 /* Sport_GlobalMananger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport_GlobalMananger.h; sourceTree = "<group>"; };
-		94C26108281559160075B013 /* Sport_QRManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport_QRManager.h; sourceTree = "<group>"; };
-		94C26109281559160075B013 /* Sport_QRManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport_QRManager.m; sourceTree = "<group>"; };
-		94C2610B281559280075B013 /* Sport_CardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport_CardModel.m; sourceTree = "<group>"; };
-		94C2610C281559280075B013 /* Sport_CardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport_CardModel.h; sourceTree = "<group>"; };
+		94C26105281558D20075B013 /* Expert_GlobalMananger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expert_GlobalMananger.m; sourceTree = "<group>"; };
+		94C26106281558D20075B013 /* Expert_GlobalMananger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expert_GlobalMananger.h; sourceTree = "<group>"; };
+		94C26108281559160075B013 /* Expert_QRManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expert_QRManager.h; sourceTree = "<group>"; };
+		94C26109281559160075B013 /* Expert_QRManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expert_QRManager.m; sourceTree = "<group>"; };
+		94C2610B281559280075B013 /* Expert_CardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expert_CardModel.m; sourceTree = "<group>"; };
+		94C2610C281559280075B013 /* Expert_CardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expert_CardModel.h; sourceTree = "<group>"; };
 		94C2610F2815595C0075B013 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		94C261102815595C0075B013 /* PingFoundtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingFoundtion.m; sourceTree = "<group>"; };
 		94C261112815595C0075B013 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
@@ -143,10 +266,10 @@
 		94C26127281682E90075B013 /* M710_ConnectTypeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_ConnectTypeView.m; sourceTree = "<group>"; };
 		94C261292816C96C0075B013 /* M710_ServerListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_ServerListController.h; sourceTree = "<group>"; };
 		94C2612A2816C96C0075B013 /* M710_ServerListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_ServerListController.m; sourceTree = "<group>"; };
-		94C2612D2816CA7E0075B013 /* Sport_ServerVPNModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport_ServerVPNModel.h; sourceTree = "<group>"; };
-		94C2612E2816CA7E0075B013 /* Sport_GlobalConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport_GlobalConfigModel.m; sourceTree = "<group>"; };
-		94C2612F2816CA7E0075B013 /* Sport_ServerVPNModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport_ServerVPNModel.m; sourceTree = "<group>"; };
-		94C261302816CA7E0075B013 /* Sport_GlobalConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport_GlobalConfigModel.h; sourceTree = "<group>"; };
+		94C2612D2816CA7E0075B013 /* Expert_ServerVPNModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expert_ServerVPNModel.h; sourceTree = "<group>"; };
+		94C2612E2816CA7E0075B013 /* Expert_GlobalConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expert_GlobalConfigModel.m; sourceTree = "<group>"; };
+		94C2612F2816CA7E0075B013 /* Expert_ServerVPNModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expert_ServerVPNModel.m; sourceTree = "<group>"; };
+		94C261302816CA7E0075B013 /* Expert_GlobalConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expert_GlobalConfigModel.h; sourceTree = "<group>"; };
 		94C261332816CBB30075B013 /* M710_ServerListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M710_ServerListCell.h; sourceTree = "<group>"; };
 		94C261342816CBB30075B013 /* M710_ServerListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_ServerListCell.m; sourceTree = "<group>"; };
 		94C2613628179D190075B013 /* SelectNavgidueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectNavgidueView.h; sourceTree = "<group>"; };
@@ -155,15 +278,26 @@
 		94C2613A2817DF070075B013 /* M710_EditQRController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M710_EditQRController.m; sourceTree = "<group>"; };
 		94C2613C2817F9920075B013 /* CreatUrlCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreatUrlCell.h; sourceTree = "<group>"; };
 		94C2613D2817F9920075B013 /* CreatUrlCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreatUrlCell.m; sourceTree = "<group>"; };
+		94F85987283399A50028AA3D /* default_serverList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default_serverList.txt; sourceTree = "<group>"; };
 		D88FFEB34A023A0B4A0E12ED /* Pods_m710qrcode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_m710qrcode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		949B564B282BB90C0062F563 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				949B5650282BB90C0062F563 /* NetworkExtension.framework in Frameworks */,
+				5B4F865A5F45188E66306891 /* Pods_PacketTunnel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94A992A9280FEE5900F3E521 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F69862EB9F892740D82FFB73 /* Pods_m710qrcode.framework in Frameworks */,
+				949B565F282BB93B0062F563 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,8 +308,133 @@
 			isa = PBXGroup;
 			children = (
 				D88FFEB34A023A0B4A0E12ED /* Pods_m710qrcode.framework */,
+				949B564F282BB90C0062F563 /* NetworkExtension.framework */,
+				9440D78A41E17EFAE4DBDF80 /* Pods_PacketTunnel.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		949B560E282BB38E0062F563 /* m710_net */ = {
+			isa = PBXGroup;
+			children = (
+				949B5610282BB38E0062F563 /* XCClient.h */,
+				949B5613282BB38E0062F563 /* XCClient.m */,
+				949B5611282BB38E0062F563 /* HomeAdapter.h */,
+				949B5614282BB38E0062F563 /* HomeAdapter.m */,
+				949B560F282BB38E0062F563 /* AESencrytDecrypt.h */,
+				949B5612282BB38E0062F563 /* AESencrytDecrypt.m */,
+			);
+			path = m710_net;
+			sourceTree = "<group>";
+		};
+		949B561E282BB8430062F563 /* SOneVPManage */ = {
+			isa = PBXGroup;
+			children = (
+				949B5628282BB8430062F563 /* SOneCertManage.h */,
+				949B5639282BB8430062F563 /* SOneCertManage.m */,
+				949B5635282BB8430062F563 /* SOneVPManage.h */,
+				949B563A282BB8430062F563 /* SOneVPManage.m */,
+				949B561F282BB8430062F563 /* SOneVPTool */,
+				949B5629282BB8430062F563 /* SOneVPConnectDataInfo */,
+				949B562C282BB8430062F563 /* Models */,
+				949B5636282BB8430062F563 /* SOneVPUserDefaults */,
+				949B563B282BB8430062F563 /* SOneVPTransferManage */,
+			);
+			path = SOneVPManage;
+			sourceTree = "<group>";
+		};
+		949B561F282BB8430062F563 /* SOneVPTool */ = {
+			isa = PBXGroup;
+			children = (
+				949B5624282BB8430062F563 /* NSString+SOneExtension.h */,
+				949B5620282BB8430062F563 /* NSString+SOneExtension.m */,
+				949B5625282BB8430062F563 /* NSData+SOneExtension.h */,
+				949B5622282BB8430062F563 /* NSData+SOneExtension.m */,
+				949B5621282BB8430062F563 /* SOneVPTool.h */,
+				949B5626282BB8430062F563 /* SOneVPTool.m */,
+				949B5623282BB8430062F563 /* SOneVPLog.h */,
+				949B5627282BB8430062F563 /* SOneVPMacros.h */,
+			);
+			path = SOneVPTool;
+			sourceTree = "<group>";
+		};
+		949B5629282BB8430062F563 /* SOneVPConnectDataInfo */ = {
+			isa = PBXGroup;
+			children = (
+				949B562A282BB8430062F563 /* SOneVPConnectDataInfo.h */,
+				949B562B282BB8430062F563 /* SOneVPConnectDataInfo.m */,
+			);
+			path = SOneVPConnectDataInfo;
+			sourceTree = "<group>";
+		};
+		949B562C282BB8430062F563 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				949B562D282BB8430062F563 /* SOneServerModel.m */,
+				949B562E282BB8430062F563 /* SOneVPConnectModeModel.h */,
+				949B562F282BB8430062F563 /* SOneVPIkeV2Model.h */,
+				949B5630282BB8430062F563 /* SOneVPCertModel.m */,
+				949B5631282BB8430062F563 /* SOneVPIkeV2Model.m */,
+				949B5632282BB8430062F563 /* SOneVPConnectModeModel.m */,
+				949B5633282BB8430062F563 /* SOneServerModel.h */,
+				949B5634282BB8430062F563 /* SOneVPCertModel.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		949B5636282BB8430062F563 /* SOneVPUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				949B5637282BB8430062F563 /* SOneVPUserDefaults.h */,
+				949B5638282BB8430062F563 /* SOneVPUserDefaults.m */,
+			);
+			path = SOneVPUserDefaults;
+			sourceTree = "<group>";
+		};
+		949B563B282BB8430062F563 /* SOneVPTransferManage */ = {
+			isa = PBXGroup;
+			children = (
+				949B563C282BB8430062F563 /* SOneVPTransferManage.h */,
+				949B563D282BB8430062F563 /* SOneVPTransferManage.m */,
+			);
+			path = SOneVPTransferManage;
+			sourceTree = "<group>";
+		};
+		949B5651282BB90C0062F563 /* PacketTunnel */ = {
+			isa = PBXGroup;
+			children = (
+				949B5663282BC0120062F563 /* SOneLog.h */,
+				949B5664282BC0280062F563 /* PacketTunnel_VPMacro.h */,
+				949B5652282BB90C0062F563 /* PacketTunnelProvider.h */,
+				949B5653282BB90C0062F563 /* PacketTunnelProvider.m */,
+				949B5655282BB90C0062F563 /* Info.plist */,
+				949B5656282BB90C0062F563 /* PacketTunnel.entitlements */,
+			);
+			path = PacketTunnel;
+			sourceTree = "<group>";
+		};
+		949B566C282E56550062F563 /* m710-domain */ = {
+			isa = PBXGroup;
+			children = (
+				949B566D282E56550062F563 /* index.html */,
+				949B566E282E56550062F563 /* index.css */,
+				949B566F282E56550062F563 /* img */,
+				949B5674282E56550062F563 /* Service.html */,
+				949B5675282E56550062F563 /* Privacy.html */,
+				949B567E282E57480062F563 /* FirstPrivacy.html */,
+			);
+			path = "m710-domain";
+			sourceTree = "<group>";
+		};
+		949B566F282E56550062F563 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				949B5670282E56550062F563 /* btn.png */,
+				949B5671282E56550062F563 /* logo.png */,
+				949B5672282E56550062F563 /* bg1.png */,
+				949B5673282E56550062F563 /* bg2.png */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 		94A992A3280FEE5900F3E521 = {
@@ -184,6 +443,7 @@
 				94C2611B28163C900075B013 /* datasource */,
 				94A992EE28113A4700F3E521 /* CommonKit */,
 				94A992AE280FEE5900F3E521 /* m710qrcode */,
+				949B5651282BB90C0062F563 /* PacketTunnel */,
 				94A992AD280FEE5900F3E521 /* Products */,
 				C384495B079138BB7E76EBB9 /* Pods */,
 				35E0D1B74C9ECE8742F6A0A2 /* Frameworks */,
@@ -194,6 +454,7 @@
 			isa = PBXGroup;
 			children = (
 				94A992AC280FEE5900F3E521 /* m710qrcode.app */,
+				949B564E282BB90C0062F563 /* PacketTunnel.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,6 +462,7 @@
 		94A992AE280FEE5900F3E521 /* m710qrcode */ = {
 			isa = PBXGroup;
 			children = (
+				949B565E282BB9200062F563 /* m710qrcode.entitlements */,
 				94A992F828113FE800F3E521 /* m710_launch */,
 				94A992D0281105D300F3E521 /* base */,
 				94A992CC281006C100F3E521 /* setting */,
@@ -284,6 +546,8 @@
 		94A992D0281105D300F3E521 /* base */ = {
 			isa = PBXGroup;
 			children = (
+				949B560B282B5BEF0062F563 /* Expert_WebViewController.h */,
+				949B560C282B5BF40062F563 /* Expert_WebViewController.m */,
 				94A992EA281139CB00F3E521 /* BaseNavController.h */,
 				94A992E8281139CB00F3E521 /* BaseNavController.m */,
 				94A992E9281139CB00F3E521 /* M710_BaseViewController.h */,
@@ -309,6 +573,8 @@
 		94A992EE28113A4700F3E521 /* CommonKit */ = {
 			isa = PBXGroup;
 			children = (
+				949B561E282BB8430062F563 /* SOneVPManage */,
+				949B560E282BB38E0062F563 /* m710_net */,
 				94C2612C2816CA7E0075B013 /* m710_model */,
 				94C2610E2815593E0075B013 /* m710_pingHelp */,
 				94C26104281558AD0075B013 /* m710_toolManager */,
@@ -321,8 +587,6 @@
 		94A992EF28113A5B00F3E521 /* m710_category */ = {
 			isa = PBXGroup;
 			children = (
-				94A992F328113A5B00F3E521 /* XCWebViewController.h */,
-				94A992F028113A5B00F3E521 /* XCWebViewController.m */,
 				94A992F228113A5B00F3E521 /* NSObject+TopViewController.h */,
 				94A992F128113A5B00F3E521 /* NSObject+TopViewController.m */,
 			);
@@ -342,6 +606,8 @@
 			children = (
 				94A992F92811406300F3E521 /* M710_LaunchController.h */,
 				94A992FA2811406300F3E521 /* M710_LaunchController.m */,
+				949B5680282E58B90062F563 /* Sport_PrivacyViewController.h */,
+				949B5681282E58B90062F563 /* Sport_PrivacyViewController.m */,
 			);
 			path = m710_launch;
 			sourceTree = "<group>";
@@ -396,6 +662,8 @@
 				94C26127281682E90075B013 /* M710_ConnectTypeView.m */,
 				94C261332816CBB30075B013 /* M710_ServerListCell.h */,
 				94C261342816CBB30075B013 /* M710_ServerListCell.m */,
+				949B5684282E5B940062F563 /* Sport_PrivacyView.h */,
+				949B5683282E5B940062F563 /* Sport_PrivacyView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -403,12 +671,12 @@
 		94C26104281558AD0075B013 /* m710_toolManager */ = {
 			isa = PBXGroup;
 			children = (
-				94C2610C281559280075B013 /* Sport_CardModel.h */,
-				94C2610B281559280075B013 /* Sport_CardModel.m */,
-				94C26108281559160075B013 /* Sport_QRManager.h */,
-				94C26109281559160075B013 /* Sport_QRManager.m */,
-				94C26106281558D20075B013 /* Sport_GlobalMananger.h */,
-				94C26105281558D20075B013 /* Sport_GlobalMananger.m */,
+				94C2610C281559280075B013 /* Expert_CardModel.h */,
+				94C2610B281559280075B013 /* Expert_CardModel.m */,
+				94C26108281559160075B013 /* Expert_QRManager.h */,
+				94C26109281559160075B013 /* Expert_QRManager.m */,
+				94C26106281558D20075B013 /* Expert_GlobalMananger.h */,
+				94C26105281558D20075B013 /* Expert_GlobalMananger.m */,
 				94C2611928156BCB0075B013 /* SportAppConfig.h */,
 				94C2611828156BCB0075B013 /* SportAppConfig.m */,
 			);
@@ -420,6 +688,8 @@
 			children = (
 				94C261112815595C0075B013 /* NSDate+Helper.h */,
 				94C2610F2815595C0075B013 /* NSDate+Helper.m */,
+				949B5665282D04300062F563 /* PingConfig.h */,
+				949B5666282D04310062F563 /* PingConfig.m */,
 				94C261142815595C0075B013 /* PingFoundtion.h */,
 				94C261102815595C0075B013 /* PingFoundtion.m */,
 				94C261122815595C0075B013 /* PingHelper.h */,
@@ -431,8 +701,12 @@
 		94C2611B28163C900075B013 /* datasource */ = {
 			isa = PBXGroup;
 			children = (
+				94F85987283399A50028AA3D /* default_serverList.txt */,
 				94C2611D28163CA10075B013 /* connect.json */,
 				94C2611C28163CA10075B013 /* start.json */,
+				949B5668282DFD940062F563 /* kRemoteCertFileName */,
+				949B566A282DFDAB0062F563 /* AutoModeConfig.txt */,
+				949B566C282E56550062F563 /* m710-domain */,
 			);
 			path = datasource;
 			sourceTree = "<group>";
@@ -440,10 +714,10 @@
 		94C2612C2816CA7E0075B013 /* m710_model */ = {
 			isa = PBXGroup;
 			children = (
-				94C261302816CA7E0075B013 /* Sport_GlobalConfigModel.h */,
-				94C2612E2816CA7E0075B013 /* Sport_GlobalConfigModel.m */,
-				94C2612D2816CA7E0075B013 /* Sport_ServerVPNModel.h */,
-				94C2612F2816CA7E0075B013 /* Sport_ServerVPNModel.m */,
+				94C261302816CA7E0075B013 /* Expert_GlobalConfigModel.h */,
+				94C2612E2816CA7E0075B013 /* Expert_GlobalConfigModel.m */,
+				94C2612D2816CA7E0075B013 /* Expert_ServerVPNModel.h */,
+				94C2612F2816CA7E0075B013 /* Expert_ServerVPNModel.m */,
 			);
 			path = m710_model;
 			sourceTree = "<group>";
@@ -453,6 +727,8 @@
 			children = (
 				8C3566B8BE6E31423275C0CA /* Pods-m710qrcode.debug.xcconfig */,
 				5B0DA7E52CFB554378F6BD9B /* Pods-m710qrcode.release.xcconfig */,
+				042FE9A1A449FE656F75BFA5 /* Pods-PacketTunnel.debug.xcconfig */,
+				781859DF46F3DD8647A4CF07 /* Pods-PacketTunnel.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -460,6 +736,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		949B564D282BB90C0062F563 /* PacketTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 949B565A282BB90C0062F563 /* Build configuration list for PBXNativeTarget "PacketTunnel" */;
+			buildPhases = (
+				8B96BDE8FD4BEE9683431F83 /* [CP] Check Pods Manifest.lock */,
+				949B564A282BB90C0062F563 /* Sources */,
+				949B564B282BB90C0062F563 /* Frameworks */,
+				949B564C282BB90C0062F563 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PacketTunnel;
+			productName = PacketTunnel;
+			productReference = 949B564E282BB90C0062F563 /* PacketTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		94A992AB280FEE5900F3E521 /* m710qrcode */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94A992C5280FEE5900F3E521 /* Build configuration list for PBXNativeTarget "m710qrcode" */;
@@ -469,10 +763,12 @@
 				94A992A9280FEE5900F3E521 /* Frameworks */,
 				94A992AA280FEE5900F3E521 /* Resources */,
 				ED040F71EB06ABB168137B04 /* [CP] Embed Pods Frameworks */,
+				949B565D282BB90C0062F563 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				949B5658282BB90C0062F563 /* PBXTargetDependency */,
 			);
 			name = m710qrcode;
 			productName = m710qrcode;
@@ -488,6 +784,9 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					949B564D282BB90C0062F563 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 					94A992AB280FEE5900F3E521 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
@@ -507,26 +806,68 @@
 			projectRoot = "";
 			targets = (
 				94A992AB280FEE5900F3E521 /* m710qrcode */,
+				949B564D282BB90C0062F563 /* PacketTunnel */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		949B564C282BB90C0062F563 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94A992AA280FEE5900F3E521 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F85988283399A50028AA3D /* default_serverList.txt in Resources */,
+				949B567A282E56550062F563 /* bg1.png in Resources */,
 				94C2611E28163CA10075B013 /* start.json in Resources */,
+				949B5669282DFD940062F563 /* kRemoteCertFileName in Resources */,
+				949B5679282E56550062F563 /* logo.png in Resources */,
+				949B5678282E56550062F563 /* btn.png in Resources */,
 				94A992BF280FEE5900F3E521 /* LaunchScreen.storyboard in Resources */,
+				949B567B282E56550062F563 /* bg2.png in Resources */,
+				949B566B282DFDAB0062F563 /* AutoModeConfig.txt in Resources */,
+				949B567C282E56550062F563 /* Service.html in Resources */,
+				949B567D282E56550062F563 /* Privacy.html in Resources */,
+				949B567F282E57480062F563 /* FirstPrivacy.html in Resources */,
 				94C2611F28163CA10075B013 /* connect.json in Resources */,
+				949B5676282E56550062F563 /* index.html in Resources */,
 				94A992BC280FEE5900F3E521 /* Assets.xcassets in Resources */,
 				94A992BA280FEE5900F3E521 /* Main.storyboard in Resources */,
+				949B5677282E56550062F563 /* index.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8B96BDE8FD4BEE9683431F83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PacketTunnel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E29A0F14BAB13A093071571E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -569,49 +910,78 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		949B564A282BB90C0062F563 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				949B5662282BBF8F0062F563 /* NSString+SOneExtension.m in Sources */,
+				949B5660282BBF740062F563 /* SOneVPTransferManage.m in Sources */,
+				949B5661282BBF7F0062F563 /* SOneVPConnectDataInfo.m in Sources */,
+				949B5654282BB90C0062F563 /* PacketTunnelProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94A992A8280FEE5900F3E521 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				94A99305281146DD00F3E521 /* M710_TextField.m in Sources */,
+				949B563F282BB8430062F563 /* NSData+SOneExtension.m in Sources */,
+				949B5617282BB38E0062F563 /* HomeAdapter.m in Sources */,
 				94A992DB281107A500F3E521 /* UIView+LBExtension.m in Sources */,
+				949B5685282E5B940062F563 /* Sport_PrivacyView.m in Sources */,
+				949B5640282BB8430062F563 /* SOneVPTool.m in Sources */,
+				949B5648282BB8430062F563 /* SOneVPManage.m in Sources */,
 				94C2612B2816C96C0075B013 /* M710_ServerListController.m in Sources */,
+				949B5616282BB38E0062F563 /* XCClient.m in Sources */,
 				94C2613E2817F9920075B013 /* CreatUrlCell.m in Sources */,
+				949B5641282BB8430062F563 /* SOneVPConnectDataInfo.m in Sources */,
 				94A992EC281139CB00F3E521 /* BaseNavController.m in Sources */,
 				94C2611A28156BCB0075B013 /* SportAppConfig.m in Sources */,
 				94A992CF2810073700F3E521 /* M710_ScanViewController.m in Sources */,
 				94C260F928151A9A0075B013 /* M710_AboutViewController.m in Sources */,
 				94C2612528167BEF0075B013 /* M710_ConnectServerView.m in Sources */,
-				94C2610A281559160075B013 /* Sport_QRManager.m in Sources */,
+				94C2610A281559160075B013 /* Expert_QRManager.m in Sources */,
 				94C261152815595C0075B013 /* NSDate+Helper.m in Sources */,
 				94A992DE2811080700F3E521 /* M710_MineViewController.m in Sources */,
 				94A99304281146DD00F3E521 /* M710_TextView.m in Sources */,
 				94C26103281555170075B013 /* M710_VpnConnectView.m in Sources */,
 				94A993092811556D00F3E521 /* HistoryCellView.m in Sources */,
 				94A992B1280FEE5900F3E521 /* AppDelegate.m in Sources */,
-				94A992F428113A5B00F3E521 /* XCWebViewController.m in Sources */,
+				949B563E282BB8430062F563 /* NSString+SOneExtension.m in Sources */,
 				94A9930C28127CD200F3E521 /* M710_CreatResultController.m in Sources */,
 				94C2613B2817DF070075B013 /* M710_EditQRController.m in Sources */,
 				94A992F528113A5B00F3E521 /* NSObject+TopViewController.m in Sources */,
+				949B5615282BB38E0062F563 /* AESencrytDecrypt.m in Sources */,
+				949B5643282BB8430062F563 /* SOneVPCertModel.m in Sources */,
+				949B5645282BB8430062F563 /* SOneVPConnectModeModel.m in Sources */,
 				94A992E1281108E300F3E521 /* M710_HistoryViewController.m in Sources */,
-				94C2610D281559280075B013 /* Sport_CardModel.m in Sources */,
+				949B5667282D04310062F563 /* PingConfig.m in Sources */,
+				94C2610D281559280075B013 /* Expert_CardModel.m in Sources */,
 				94C2613828179D190075B013 /* SelectNavgidueView.m in Sources */,
 				94A992ED281139CB00F3E521 /* M710_BaseViewController.m in Sources */,
-				94C26107281558D20075B013 /* Sport_GlobalMananger.m in Sources */,
+				949B560D282B5BF40062F563 /* Expert_WebViewController.m in Sources */,
+				94C26107281558D20075B013 /* Expert_GlobalMananger.m in Sources */,
 				94C2612228164A2D0075B013 /* M710_VpnResultController.m in Sources */,
 				94A993132812AD0800F3E521 /* SettingViewCell.m in Sources */,
 				94A992C2280FEE5900F3E521 /* main.m in Sources */,
 				94C261172815595C0075B013 /* PingHelper.m in Sources */,
+				949B5682282E58B90062F563 /* Sport_PrivacyViewController.m in Sources */,
 				94A992FB2811406300F3E521 /* M710_LaunchController.m in Sources */,
 				94A992D7281105EF00F3E521 /* LBTabBarController.m in Sources */,
 				94C260FF28153EF20075B013 /* M710_ClearCacheView.m in Sources */,
+				949B5644282BB8430062F563 /* SOneVPIkeV2Model.m in Sources */,
 				94A9930F2812913200F3E521 /* M710_ScanResultController.m in Sources */,
-				94C261322816CA7E0075B013 /* Sport_ServerVPNModel.m in Sources */,
+				949B5646282BB8430062F563 /* SOneVPUserDefaults.m in Sources */,
+				94C261322816CA7E0075B013 /* Expert_ServerVPNModel.m in Sources */,
 				94C261352816CBB30075B013 /* M710_ServerListCell.m in Sources */,
+				949B5642282BB8430062F563 /* SOneServerModel.m in Sources */,
 				94A992E7281127C800F3E521 /* M710_NetViewController.m in Sources */,
 				94A992D6281105EF00F3E521 /* LBTabBar.m in Sources */,
+				949B5649282BB8430062F563 /* SOneVPTransferManage.m in Sources */,
 				94C260FC281520980075B013 /* M710_RateView.m in Sources */,
-				94C261312816CA7E0075B013 /* Sport_GlobalConfigModel.m in Sources */,
+				949B5647282BB8430062F563 /* SOneCertManage.m in Sources */,
+				94C261312816CA7E0075B013 /* Expert_GlobalConfigModel.m in Sources */,
 				94C26128281682E90075B013 /* M710_ConnectTypeView.m in Sources */,
 				94A992E42811279A00F3E521 /* M710_CreatViewController.m in Sources */,
 				94C261162815595C0075B013 /* PingFoundtion.m in Sources */,
@@ -620,6 +990,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		949B5658282BB90C0062F563 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 949B564D282BB90C0062F563 /* PacketTunnel */;
+			targetProxy = 949B5657282BB90C0062F563 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		94A992B8280FEE5900F3E521 /* Main.storyboard */ = {
@@ -641,6 +1019,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		949B565B282BB90C0062F563 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042FE9A1A449FE656F75BFA5 /* Pods-PacketTunnel.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2.2;
+				DEVELOPMENT_TEAM = UPT4TR9256;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PacketTunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iqr.expert.qrcode.PacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		949B565C282BB90C0062F563 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 781859DF46F3DD8647A4CF07 /* Pods-PacketTunnel.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2.2;
+				DEVELOPMENT_TEAM = UPT4TR9256;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PacketTunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iqr.expert.qrcode.PacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		94A992C3280FEE5900F3E521 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -755,14 +1187,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8C3566B8BE6E31423275C0CA /* Pods-m710qrcode.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = m710qrcode/m710qrcode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 1.2.2;
 				DEVELOPMENT_TEAM = UPT4TR9256;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/m710qrcode/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = m710qrcode/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "IQR-Scanning Expert";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Granting camera permission, you can scan the QR code and Barcode you need with unlimited, please allow authorization.Don't worry,we will not colllect and store your information and will not upload it to the server.";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Granting contacts permission, you can save the code to the album and share it with your friends, please allow authorization.Don't worry,we will not colllect and store your information and will not upload it to the server.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Granting album permission, you can save the code to the album and share it with your friends, please allow authorization.Don't worry,we will not colllect and store your information and will not upload it to the server.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Our app will NOT track or keep any record of your activities, authorizing tracking however can help us offer no cost services funded by personalized advertising.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -774,7 +1213,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = xinjing.m710qrcode;
+				PRODUCT_BUNDLE_IDENTIFIER = iqr.expert.qrcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -785,14 +1224,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B0DA7E52CFB554378F6BD9B /* Pods-m710qrcode.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = m710qrcode/m710qrcode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 1.2.2;
 				DEVELOPMENT_TEAM = UPT4TR9256;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/m710qrcode/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = m710qrcode/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "IQR-Scanning Expert";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Granting camera permission, you can scan the QR code and Barcode you need with unlimited, please allow authorization.Don't worry,we will not colllect and store your information and will not upload it to the server.";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Granting contacts permission, you can save the code to the album and share it with your friends, please allow authorization.Don't worry,we will not colllect and store your information and will not upload it to the server.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Granting album permission, you can save the code to the album and share it with your friends, please allow authorization.Don't worry,we will not colllect and store your information and will not upload it to the server.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Our app will NOT track or keep any record of your activities, authorizing tracking however can help us offer no cost services funded by personalized advertising.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -804,7 +1250,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = xinjing.m710qrcode;
+				PRODUCT_BUNDLE_IDENTIFIER = iqr.expert.qrcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -814,6 +1260,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		949B565A282BB90C0062F563 /* Build configuration list for PBXNativeTarget "PacketTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				949B565B282BB90C0062F563 /* Debug */,
+				949B565C282BB90C0062F563 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		94A992A7280FEE5900F3E521 /* Build configuration list for PBXProject "m710qrcode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -11,7 +11,6 @@
 
 @property (nonatomic ,strong) UIImageView *icon;
 @property (nonatomic ,strong) UILabel *titleLab;
-@property (nonatomic ,strong) UISwitch *switchBtn;
 @property (nonatomic ,strong) UIImageView *rightImg;
 
 @end
@@ -32,8 +31,11 @@
         self.titleLab.text = dict[@"title"];
         self.rightImg.hidden = [dict[@"isSwitch"] boolValue];
         self.switchBtn.hidden = !self.rightImg.hidden;
+        
+        if ([dict[@"title"] isEqualToString:@"Save History"]) {
+            self.switchBtn.on = [NSUserDefaults jk_boolForKey:APP_QRCode_Cache];
+        }
     }
-    
 }
 
 - (void)hideRightBtn{
@@ -42,10 +44,36 @@
 }
 
 - (void)switchChange:(UISwitch*)sw {
-    if(sw.on == YES) {
-        NSLog(@"开关切换为开");
-    } else if(sw.on == NO) {
-        NSLog(@"开关切换为关");
+    if ([self.dict[@"title"] isEqualToString:@"Save History"]) {
+        [NSUserDefaults jk_setObject:@(sw.on) forKey:APP_QRCode_Cache];
+    }else{
+        [self openFlash:sw.on];
+    }
+}
+
+- (void)openFlash:(BOOL)isOpen{
+    if ([Expert_GlobalMananger checkoutDeviceIsiPad]) {
+        return;
+    }
+    if (isOpen == YES) {
+        //打开闪光灯
+        AVCaptureDevice *captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+        NSError *error = nil;
+        if ([captureDevice hasTorch]) {
+            BOOL locked = [captureDevice lockForConfiguration:&error];
+            if (locked) {
+                captureDevice.torchMode = AVCaptureTorchModeOn;
+                [captureDevice unlockForConfiguration];
+            }
+        }
+    }else{
+         //关闭闪光灯
+        AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+        if ([device hasTorch]) {
+            [device lockForConfiguration:nil];
+            [device setTorchMode: AVCaptureTorchModeOff];
+            [device unlockForConfiguration];
+        }
     }
 }
 

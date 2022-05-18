@@ -26,6 +26,14 @@
     return self;
 }
 
+-(void)setVpnModel:(Expert_ServerVPNModel *)vpnModel{
+    if (vpnModel) {
+        _vpnModel = vpnModel;
+        self.countryImg.image = [UIImage imageNamed:[vpnModel.icon uppercaseString]];
+        self.nameLab.text = vpnModel.expert_alisaName;
+    }
+}
+
 - (void)moreClick:(UIButton *)button{
     M710_ServerListController *vc = [[M710_ServerListController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;

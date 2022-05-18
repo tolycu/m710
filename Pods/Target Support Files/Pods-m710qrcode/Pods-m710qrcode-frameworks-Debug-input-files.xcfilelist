@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-m710qrcode/Pods-m710qrcode-frameworks.sh
+${BUILT_PRODUCTS_DIR}/OpenVPNAdapter/OpenVPNAdapter.framework
 ${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
 ${BUILT_PRODUCTS_DIR}/ColorUtils/ColorUtils.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework

@@ -27,6 +27,31 @@
     return self;
 }
 
+- (void)setVpnModel:(Expert_ServerVPNModel *)vpnModel{
+    if (vpnModel) {
+        _vpnModel = vpnModel;
+        self.countryImg.image = [UIImage imageNamed:[vpnModel.icon uppercaseString]];
+        self.nameLab.text = vpnModel.expert_alisaName;
+        self.ipLab.text = vpnModel.expert_host;
+        NSString *pingStr = vpnModel.ping>0?[NSString stringWithFormat:@"%d",vpnModel.ping]:@"N/A";
+        self.pingLab.text = pingStr;
+        [self changePingTextColorWithPing:vpnModel.ping];
+        self.statusBtn.selected = [TOOL_MANAGE checkoutSelect:vpnModel];
+    }
+}
+
+- (void)changePingTextColorWithPing:(int)ping{
+    if (ping > 0 && ping < 221) {
+        self.pingLab.textColor = [UIColor colorWithString:@"#52ccbb"];
+    }else if (ping >220 && ping < 501){
+        self.pingLab.textColor = [UIColor colorWithString:@"#ffea00"];
+    }else if (ping >500 && ping < 1001){
+        self.pingLab.textColor = [UIColor colorWithString:@"#ffa250"];
+    }else{
+        self.pingLab.textColor = [UIColor colorWithString:@"#ff5050"];
+    }
+}
+
 - (void)addSubview_layout{
     
     self.contentView.layer.cornerRadius = 10.f;

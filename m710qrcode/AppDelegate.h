@@ -9,6 +9,7 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (nonatomic , strong) UIWindow *_Nullable subWindow;
 @property (nonatomic , strong) UIWindow *_Nullable window;
 
 @end

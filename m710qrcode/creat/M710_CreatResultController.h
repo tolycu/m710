@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface M710_CreatResultController : M710_BaseViewController
 
 @property(nonatomic,strong) NSString *resultStr;
+@property(nonatomic,strong) NSString *dateStr;
 
 @end
 

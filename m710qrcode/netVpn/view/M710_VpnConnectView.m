@@ -30,7 +30,7 @@
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-    NSLog(@"Status 改变了%@  AppStore--%ld",change,TOOL_MANAGE.status);
+//    NSLog(@"Status 改变了%@  AppStore--%ld",change,TOOL_MANAGE.status);
     [self changeConnectView:TOOL_MANAGE.status];
 }
 
@@ -41,16 +41,19 @@
         [self.lottieView play];
         self.rightImg.hidden = YES;
         self.leftImg.hidden = YES;
+        self.bgImg.image = [UIImage imageNamed:@"vpn_bg"];
         
     }else if(status == NEVPNStatusConnected){
         self.lottieView.hidden = YES;
         self.leftImg.hidden = YES;
         self.rightImg.hidden = NO;
+        self.bgImg.image = [UIImage imageNamed:@"vpn_bg_success"];
         
     }else{
         self.lottieView.hidden = YES;
         self.leftImg.hidden = NO;
         self.rightImg.hidden = YES;
+        self.bgImg.image = [UIImage imageNamed:@"vpn_bg"];
     }
 }
 

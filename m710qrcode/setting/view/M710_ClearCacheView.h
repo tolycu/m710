@@ -8,8 +8,10 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+typedef void(^YesCompletionHandler)(void);
 @interface M710_ClearCacheView : UIView
+
+@property (nonatomic ,copy) YesCompletionHandler yesCompletionHandler;
 
 - (instancetype)initWithFrame:(CGRect)frame title:(NSString *)title des:(NSString *)des btns:(BOOL)btns;
 - (void)show;

@@ -49,6 +49,7 @@
 #pragma mark --- 进入结果页
 - (void)nextClick:(UIButton *)button{
     M710_CreatResultController *vc = [[M710_CreatResultController alloc] init];
+    NSString *tempstr ;
     switch (self.type) {
         case DataStringQRType_card:
         {
@@ -58,6 +59,9 @@
             }
             if (self.phoneTF.text.length) {
                 string = [NSString stringWithFormat:@"%@\r\nTEL:%@",string,self.phoneTF.text];
+            }else{
+                [self inputInfo];
+                return;
             }
             if (self.emailTF.text.length) {
                 string = [NSString stringWithFormat:@"%@\r\nEMAIL:%@",string,self.emailTF.text];
@@ -65,7 +69,7 @@
             if (self.birthdayTF.text.length) {
                 string = [NSString stringWithFormat:@"%@\r\nBDAY:%@",string,self.birthdayTF.text];
             }
-            vc.resultStr = string;
+            tempstr = string;
         }
             break;
             
@@ -73,25 +77,28 @@
         {
             if (self.index == 0) {
                 if (self.nameView.text.length) {
-                    vc.resultStr = [NSString stringWithFormat:@"%@%@",QR_TwitterName,self.nameView.text];
+                    tempstr = [NSString stringWithFormat:@"%@%@",QR_TwitterName,self.nameView.text];
                 }else{
                     [self inputInfo];
+                    return;
                 }
             }else{
                 if (self.urlView.text.length) {
-                    vc.resultStr = [NSString stringWithFormat:@"%@%@",QR_TwitterUrl,self.urlView.text];
+                    tempstr = [NSString stringWithFormat:@"%@%@",QR_TwitterUrl,self.urlView.text];
                 }else{
                     [self inputInfo];
+                    return;
                 }
             }
         }
             break;
             
         case DataStringQRType_barcode:
-            if([Sport_GlobalMananger isBarCodeNumText:self.phoneTF.text]) {
-                vc.resultStr = [NSString stringWithFormat:@"Product:%@",self.phoneTF.text];
+            if([Expert_GlobalMananger isBarCodeNumText:self.phoneTF.text]) {
+                tempstr = [NSString stringWithFormat:@"Product:%@",self.phoneTF.text];
             }else{
                 [self.view makeToast:@"Nothing can be Searched!"];
+                return;
             }
             break;
             
@@ -99,15 +106,17 @@
         {
             if (self.index == 0) {
                 if (self.nameView.text.length) {
-                    vc.resultStr = [NSString stringWithFormat:@"%@%@",QR_fbID,self.nameView.text];
+                    tempstr = [NSString stringWithFormat:@"%@%@",QR_fbID,self.nameView.text];
                 }else{
                     [self inputInfo];
+                    return;
                 }
             }else{
                 if (self.urlView.text.length) {
-                    vc.resultStr = [NSString stringWithFormat:@"%@%@",QR_fbUrl,self.urlView.text];
+                    tempstr = [NSString stringWithFormat:@"%@%@",QR_fbUrl,self.urlView.text];
                 }else{
                     [self inputInfo];
+                    return;
                 }
             }
         }
@@ -116,9 +125,10 @@
         case DataStringQRType_url:
         {
             if (self.urlView.text.length) {
-                vc.resultStr = [NSString stringWithFormat:@"%@",self.urlView.text];
+                tempstr = [NSString stringWithFormat:@"%@",self.urlView.text];
             }else{
                 [self inputInfo];
+                return;
             }
         }
             break;
@@ -126,9 +136,10 @@
         case DataStringQRType_text:
         {
             if (self.nameView.text.length) {
-                vc.resultStr = [NSString stringWithFormat:@"%@",self.nameView.text];
+                tempstr = [NSString stringWithFormat:@"%@",self.nameView.text];
             }else{
                 [self inputInfo];
+                return;
             }
         }
             break;
@@ -138,9 +149,10 @@
             NSString *str = @"WIFI:";
             if (self.nameTF.text.length && self.phoneTF.text.length) {
                 str = [NSString stringWithFormat:@"%@S:%@;P:%@",str,self.nameTF.text,self.phoneTF.text];
-                vc.resultStr = str;
+                tempstr = str;
             }else{
                 [self inputInfo];
+                return;
             }
         }
             break;
@@ -148,9 +160,10 @@
         case DataStringQRType_whatsapp:
         {
             if (self.phoneTF.text.length) {
-                vc.resultStr = [NSString stringWithFormat:@"%@%@%@",QR_Whatsapp,[TOOL_MANAGE getDeviceISOCountryCode],self.phoneTF.text];
+                tempstr = [NSString stringWithFormat:@"%@%@%@",QR_Whatsapp,[TOOL_MANAGE getDeviceISOCountryCode],self.phoneTF.text];
             }else{
                 [self inputInfo];
+                return;
             }
         }
             break;
@@ -158,9 +171,10 @@
         case DataStringQRType_phone:
         {
             if (self.nameTF.text.length) {
-                vc.resultStr = [NSString stringWithFormat:@"tel:%@",self.nameTF.text];
+                tempstr = [NSString stringWithFormat:@"tel:%@",self.nameTF.text];
             }else{
                 [self inputInfo];
+                return;
             }
         }
             break;
@@ -168,9 +182,11 @@
         default:
             break;
     }
-    
+    [TOOL_MANAGE saveCreat:tempstr];
+    NSString *dateStr = [NSDate jk_currentDateStringWithFormat:@"MM/dd/YYYY HH:mm:ss"];
+    vc.dateStr = dateStr;
+    vc.resultStr = tempstr;
     [self.navigationController pushViewController:vc animated:YES];
-    
 }
 
 - (void)addSubView_layout{

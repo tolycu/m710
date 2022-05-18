@@ -7,7 +7,7 @@
 
 #import "M710_ScanViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#import "Sport_QRManager.h"
+#import "Expert_QRManager.h"
 #import <Photos/Photos.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <AVFoundation/AVCaptureDevice.h>
@@ -53,6 +53,7 @@
         [self.session startRunning];
         [self.timer setFireDate:[NSDate date]];
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:App_CloseFlash object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -214,7 +215,7 @@
         
         AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex:0];
         stringValue = metadataObject.stringValue;
-        if (![[dict objectForKey:@"type"] jk_containsaString:@"QR"] && [Sport_GlobalMananger deptNumInputShouldNumber:stringValue]) {
+        if (![[dict objectForKey:@"type"] jk_containsaString:@"QR"] && [Expert_GlobalMananger deptNumInputShouldNumber:stringValue]) {
             stringValue = [NSString stringWithFormat:@"Product:%@",stringValue];
         }
         [self pushResultVC:stringValue];
@@ -232,15 +233,16 @@
    
     [TOOL_MANAGE saveScan:stringValue];
     
-    NSString *dateStr = [NSDate jk_currentDateStringWithFormat:@"YYYY-MM-dd HH:mm:ss"];
+    NSString *dateStr = [NSDate jk_currentDateStringWithFormat:@"MM/dd/YYYY HH:mm:ss"];
     M710_ScanResultController *vc = [[M710_ScanResultController alloc] init];
     vc.resultStr = stringValue;
     vc.dateStr = dateStr;
+    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)openFlash:(UIButton *)sender{
-    if ([Sport_GlobalMananger checkoutDeviceIsiPad]) {
+    if ([Expert_GlobalMananger checkoutDeviceIsiPad]) {
         return;
     }
     //获取当前相机的方向（前/后）
@@ -338,7 +340,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     [self dismissViewControllerAnimated:YES completion:^{
         UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-        NSString *result = [Sport_QRManager readQRCodeFromImage:image];
+        NSString *result = [Expert_QRManager readQRCodeFromImage:image];
         if (result.length) {
             [self pushResultVC:result];
         }else{

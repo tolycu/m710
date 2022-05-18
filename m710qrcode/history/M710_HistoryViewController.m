@@ -7,6 +7,7 @@
 
 #import "M710_HistoryViewController.h"
 #import "M710_ScanResultController.h"
+#import "M710_CreatResultController.h"
 
 #import "HistoryCellView.h"
 #import "SelectNavgidueView.h"
@@ -17,7 +18,7 @@
 @property (nonatomic ,strong) UITableView *tableView;
 @property (nonatomic ,strong) NSMutableArray *dataList;
 
-
+@property (nonatomic ,assign) NSInteger index;
 @end
 
 @implementation M710_HistoryViewController
@@ -25,10 +26,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addSubView_layout];
+    [self reloadDataList];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 10;
+    return self.dataList.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -37,6 +39,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HistoryCellView *cell = [tableView dequeueReusableCellWithIdentifier:@"HistoryCellView" forIndexPath:indexPath];
+    cell.dataDict = self.dataList[indexPath.section];
+    cell.deleteBlock = ^{
+        [self deleteHistoryAtIndexPath:indexPath];
+    };
     return cell;
 }
 
@@ -52,9 +58,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    M710_ScanResultController *vc = [[M710_ScanResultController alloc] init];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+    NSString *resultStr = self.dataList[indexPath.section][@"resultStr"];
+    NSString *dateStr = self.dataList[indexPath.section][@"dateStr"];
+    
+    if (self.index) {
+        M710_ScanResultController *vc = [[M710_ScanResultController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        vc.resultStr = resultStr;
+        vc.dateStr = dateStr;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        M710_CreatResultController *vc = [[M710_CreatResultController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        vc.resultStr = resultStr;
+        vc.dateStr = dateStr;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (void)addSubView_layout{
@@ -63,7 +82,8 @@
     
     SelectNavgidueView *headerView = [[SelectNavgidueView alloc] initWithFrame:CGRectZero leftTitle:@"Generate History " rightTitle:@"Scan History"];
     headerView.selectBlock = ^(NSInteger index) {
-        NSLog(@"选择index ---- %ld",(long)index);
+        self.index = index;
+        [self reloadDataList];
     };
     [self.view addSubview:headerView];
     [headerView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -77,6 +97,28 @@
         make.bottom.left.right.equalTo(self.view);
         make.top.equalTo(headerView.mas_bottom).offset(10);
     }];
+}
+
+- (void)reloadDataList{
+    [self.dataList removeAllObjects];
+    if (self.index) {
+        [self.dataList addObjectsFromArray:[NSUserDefaults jk_arrayForKey:@"Scan_History"]];
+    }else{
+        [self.dataList addObjectsFromArray:[NSUserDefaults jk_arrayForKey:@"Creat_History"]];
+    }
+    [self.tableView reloadData];
+}
+
+- (void)deleteHistoryAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.index) {
+        [self.dataList removeObjectAtIndex:indexPath.section];
+        [NSUserDefaults jk_setObject:self.dataList.copy forKey:@"Scan_History"];
+        [self.tableView reloadData];
+    }else{
+        [self.dataList removeObjectAtIndex:indexPath.section];
+        [NSUserDefaults jk_setObject:self.dataList.copy forKey:@"Creat_History"];
+        [self.tableView reloadData];
+    }
 }
 
 - (NSMutableArray *)dataList{

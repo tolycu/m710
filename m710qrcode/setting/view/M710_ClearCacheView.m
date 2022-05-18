@@ -136,6 +136,9 @@
 
 - (void)submitClick:(UIButton *)button{
     [self removeFromSuperview];
+    if (self.yesCompletionHandler) {
+        self.yesCompletionHandler();
+    }
 }
 
 @end

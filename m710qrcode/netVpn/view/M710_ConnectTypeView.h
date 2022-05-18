@@ -6,10 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SOneVPMacros.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+typedef void(^SelectCompletionHandler)(VPConnectMode mode);
 @interface M710_ConnectTypeView : UIView
+
+@property (nonatomic ,copy) SelectCompletionHandler selectCompletionHandler;
 
 @end
 

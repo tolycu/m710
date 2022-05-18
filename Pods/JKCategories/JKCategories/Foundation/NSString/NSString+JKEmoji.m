@@ -786,7 +786,7 @@ static NSDictionary * jk_s_cheatCodesToUnicode = nil;
                                  @"⛎": @":ophiuchus:",
                                  @"🅿": @":parking:",
                                  @"〽": @":part_alternation_mark:",
-                                 @"🛂": @":pasSport_control:",
+                                 @"🛂": @":pasExpert_control:",
                                  @"♓": @":pisces:",
                                  @"🚰": @":potable_water:",
                                  @"🚮": @":put_litter_in_its_place:",

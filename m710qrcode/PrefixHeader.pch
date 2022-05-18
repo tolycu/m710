@@ -23,9 +23,9 @@
 #import "M710_BaseViewController.h"
 #import "NSObject+TopViewController.h"
 
-#import "Sport_GlobalMananger.h"
-#import "Sport_ServerVPNModel.h"
-#import "Sport_GlobalConfigModel.h"
+#import "Expert_GlobalMananger.h"
+#import "Expert_ServerVPNModel.h"
+#import "Expert_GlobalConfigModel.h"
 #import "SportAppConfig.h"
 
 //kWeakSelf

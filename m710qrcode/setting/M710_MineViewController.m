@@ -23,6 +23,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addSubView_layout];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeFlash) name:App_CloseFlash object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self closeFlash];
+}
+
+- (void)closeFlash{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:1];
+    SettingViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    cell.switchBtn.on = NO;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -59,9 +71,17 @@
         [[M710_RateView new] show];
     }else if (indexPath.section == 4){
         M710_ClearCacheView *alterView = [[M710_ClearCacheView alloc] initWithFrame:CGRectZero title:@"Clear Cache" des:@"Clearing the cache will clear your unsaved QR code history and usage track !" btns:YES];
+        alterView.yesCompletionHandler = ^{
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"Scan_History"];
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"Creat_History"];
+        };
         [alterView show];
+    }else if (indexPath.section == 2){
+        [TOOL_MANAGE startShare];
     }
 }
+
+
 
 - (void)addSubView_layout{
     [self hideBackItem];

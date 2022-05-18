@@ -6,12 +6,16 @@
 //
 
 #import "M710_CreatResultController.h"
+#import "Expert_QRManager.h"
+#import <Photos/Photos.h>
 
 @interface M710_CreatResultController ()
 
 @property (nonatomic ,strong) UIImageView *qrImg;
 @property (nonatomic ,strong) UILabel *dateLab;
 @property (nonatomic ,strong) UITextView *resultView;
+
+@property (nonatomic ,strong) UIImage *qrcode;
 
 @end
 
@@ -20,8 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addSubViews_layout];
-    
-   
 }
 
 - (void)backClick{
@@ -72,7 +74,8 @@
     contView.layer.shadowRadius = 8.f;
     
     self.qrImg = [[UIImageView alloc] init];
-    self.qrImg.backgroundColor = [UIColor grayColor];
+    self.qrcode = [Expert_QRManager createQRimageString:self.resultStr sizeWidth:127 fillColor:[UIColor blackColor]];
+    self.qrImg.image = self.qrcode;
     [contView addSubview:self.qrImg];
     [self.qrImg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.height.mas_equalTo(127);
@@ -81,7 +84,7 @@
     }];
     
     UILabel *dateTitleLab = [[UILabel alloc] init];
-    dateTitleLab.text = @"Generate Dat：";
+    dateTitleLab.text = @"Generate Date：";
     dateTitleLab.textColor = [UIColor colorWithString:@"#999999"];
     dateTitleLab.font = [UIFont systemFontOfSize:14.f];
     [contView addSubview:dateTitleLab];
@@ -91,7 +94,7 @@
     }];
     
     self.dateLab = [[UILabel alloc] init];
-    self.dateLab.text = @"03/23/2022  12:00:00 PM";
+    self.dateLab.text = self.dateStr;
     self.dateLab.textColor = [UIColor colorWithString:@"#1A1A1A"];
     self.dateLab.font = [UIFont systemFontOfSize:14.f];
     [contView addSubview:self.dateLab];
@@ -101,7 +104,7 @@
     }];
     
     UILabel *resTitleLab = [[UILabel alloc] init];
-    resTitleLab.text = @"Generate Dat：";
+    resTitleLab.text = @"Content：";
     resTitleLab.textColor = [UIColor colorWithString:@"#999999"];
     resTitleLab.font = [UIFont systemFontOfSize:14.f];
     [contView addSubview:resTitleLab];
@@ -119,7 +122,7 @@
     self.resultView.showsVerticalScrollIndicator = NO;
     self.resultView.contentInset = UIEdgeInsetsMake(5, 10, 5, 10);
     self.resultView.editable = NO;
-    self.resultView.text = @"Hello World!";
+    self.resultView.text = self.resultStr;
     [contView addSubview:self.resultView];
     [self.resultView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(resTitleLab);
@@ -129,6 +132,10 @@
     }];
     
     UIImageView *saveImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"creat_result_save"]];
+    [saveImg jk_addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
+        [self saveClick];
+    }];
+    saveImg.userInteractionEnabled = YES;
     [self.view addSubview:saveImg];
     [saveImg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(contView.mas_bottom).offset(20);
@@ -138,6 +145,10 @@
     }];
     
     UIImageView *shareImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"creat_result_share"]];
+    [shareImg jk_addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
+        [self shareClick];
+    }];
+    shareImg.userInteractionEnabled = YES;
     [self.view addSubview:shareImg];
     [shareImg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(saveImg);
@@ -145,7 +156,53 @@
         make.width.mas_equalTo(kScaleWidth(110));
         make.height.mas_equalTo(kScaleWidth(78));
     }];
-    
+}
+
+#pragma mark - 相册权限检测
+- (void)isCanVisitPhotoLibrary:(void(^)(BOOL isAllow))result {
+
+    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+    if (status == PHAuthorizationStatusAuthorized) {
+        result(YES);
+    }else if (status == AVAuthorizationStatusDenied || status == AVAuthorizationStatusRestricted){
+        [TOOL_MANAGE showAlterToPrivacy:APP_Photo_Alert];
+        result(NO);
+    }else{
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            // 回调是在子线程的
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (status == PHAuthorizationStatusAuthorized) {
+                    result(YES);
+                }else{
+                    result(NO);
+                }
+            });
+        }];
+    }
+}
+
+- (void)saveClick{
+    [self isCanVisitPhotoLibrary:^(BOOL isAllow) {
+        if (isAllow) {
+            [self savePhoto];
+        }
+    }];
+}
+
+- (void)savePhoto{
+    [[PHPhotoLibrary sharedPhotoLibrary]performChanges:^{
+        [PHAssetChangeRequest creationRequestForAssetFromImage:self.qrcode];
+     } completionHandler:^(BOOL success, NSError * _Nullable error) {
+         dispatch_async(dispatch_get_main_queue(), ^{
+             if (!error) {
+                 [self.view makeToast:@"Save Success" duration:1.f position:CSToastPositionCenter];
+             }
+         });
+    }];
+}
+
+- (void)shareClick{
+    [TOOL_MANAGE startShareImage:self.qrcode];
 }
 
 @end

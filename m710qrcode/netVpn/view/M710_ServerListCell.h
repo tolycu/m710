@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface M710_ServerListCell : UITableViewCell
 
-@property (nonatomic ,strong) Sport_ServerVPNModel *model;
+@property (nonatomic ,strong) Expert_ServerVPNModel *vpnModel;
 
 @end
 

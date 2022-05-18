@@ -1,0 +1,107 @@
+{
+ "data":{
+    "servers": [{
+        "expert_load": 0,
+        "city": "New York",
+        "expert_country": "US",
+        "expert_oports": "tcp:102,tcp:8080,tcp:443,udp:110,udp:119,udp:800,",
+        "expert_tports": "udp:4500,udp:500,udp6:*,udp6:*,",
+        "expert_countryName": "USA",
+        "expert_osType": 5,
+        "expert_host": "154.12.238.126",
+        "expert_alisaName": "US_New York_1",
+        "expert_groupName": "US_New York",
+        "icon": "us"
+    }, {
+        "expert_load": 1,
+        "city": "New York",
+        "expert_country": "US",
+        "expert_oports": "tcp:102,tcp:8080,tcp:443,udp:110,udp:119,udp:800,",
+        "expert_tports": "udp:4500,udp:500,udp6:*,udp6:*,",
+        "expert_countryName": "USA",
+        "expert_osType": 5,
+        "expert_host": "154.12.238.129",
+        "expert_alisaName": "US_New York_1",
+        "expert_groupName": "US_New York",
+        "icon": "us"
+    }, {
+        "expert_load": 2,
+        "city": "Düsseldorf",
+        "expert_country": "DE",
+        "expert_oports": "tcp:102,tcp:8080,tcp:443,udp:110,udp:119,udp:800,",
+        "expert_tports": "udp:4500,udp:500,udp6:*,udp6:*,",
+        "expert_countryName": "DE",
+        "expert_osType": 5,
+        "expert_host": "185.237.253.228",
+        "expert_alisaName": "DE_Düsseldorf_1",
+        "expert_groupName": "DE_Düsseldorf",
+        "icon": "de"
+    }, {
+        "expert_load": 3,
+        "city": "Düsseldorf",
+        "expert_country": "DE",
+        "expert_oports": "tcp:102,tcp:8080,tcp:443,udp:110,udp:119,udp:800,",
+        "expert_tports": "udp:4500,udp:500,udp6:*,udp6:*,",
+        "expert_countryName": "DE",
+        "expert_osType": 5,
+        "expert_host": "185.237.253.136",
+        "expert_alisaName": "DE_Düsseldorf_1",
+        "expert_groupName": "DE_Düsseldorf",
+        "icon": "de"
+    },{
+        "expert_load": 4,
+        "city": "St Louis",
+        "expert_country": "US",
+        "expert_oports": "tcp:102,tcp:8080,tcp:443,udp:110,udp:119,udp:800,",
+        "expert_tports": "udp:4500,udp:500,udp6:*,udp6:*,",
+        "expert_countryName": "USA",
+        "expert_osType": 5,
+        "expert_host": "154.53.44.153",
+        "expert_alisaName": "US_St Louis_1",
+        "expert_groupName": "US_St Louis",
+        "icon": "us"
+    },,{
+        "expert_load": 5,
+        "city": "St Louis",
+        "expert_country": "US",
+        "expert_oports": "tcp:102,tcp:8080,tcp:443,udp:110,udp:119,udp:800,",
+        "expert_tports": "udp:4500,udp:500,udp6:*,udp6:*,",
+        "expert_countryName": "USA",
+        "expert_osType": 5,
+        "expert_host": "154.53.44.166",
+        "expert_alisaName": "US_St Louis_1",
+        "expert_groupName": "US_St Louis",
+        "icon": "us"
+    },
+        {
+        "expert_load": 6,
+        "city": "Seattle",
+        "expert_country": "US",
+        "expert_oports": "tcp:102,tcp:8080,tcp:443,udp:110,udp:119,udp:800,",
+        "expert_tports": "udp:4500,udp:500,udp6:*,udp6:*,",
+        "expert_countryName": "USA",
+        "expert_osType": 5,
+        "expert_host": "154.12.241.150",
+        "expert_alisaName": "US_Seattle_1",
+        "expert_groupName": "US_Seattle",
+        "icon": "us"
+    },
+        {
+        "expert_load": 7,
+        "city": "Seattle",
+        "expert_country": "US",
+        "expert_oports": "tcp:102,tcp:8080,tcp:443,udp:110,udp:119,udp:800,",
+        "expert_tports": "udp:4500,udp:500,udp6:*,udp6:*,",
+        "expert_countryName": "USA",
+        "expert_osType": 5,
+        "expert_host": "154.12.241.161",
+        "expert_alisaName": "US_Seattle_1",
+        "expert_groupName": "US_Seattle",
+        "icon": "us"
+    },],
+    "expert_certVer": 1,
+    "expert_certUrl": "http://api.vpn-pia.com/new/credentials",
+    "status": 200,
+    "pro_servers": [],
+ }
+}

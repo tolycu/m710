@@ -8,8 +8,10 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+typedef void (^CompleteNext)(void);
 @interface M710_LaunchController : UIViewController
+
+@property (nonatomic ,copy) CompleteNext nextBlock;
 
 @end
 

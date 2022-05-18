@@ -10,6 +10,7 @@
 @interface M710_RateView ()
 
 @property (nonatomic ,strong) NSMutableArray<UIButton *> *stars;
+@property (nonatomic ,assign) NSInteger index;
 
 @end
 
@@ -139,10 +140,14 @@
 
 - (void)submitClick:(UIButton *)button{
     [self removeFromSuperview];
+    if (self.index > 2) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:k_APPStore_Write]];
+    }
 }
 
 - (void)selectStar:(UIButton *)button{
     NSInteger index = button.tag - 100;
+    self.index = index;
     for (UIButton *btn in self.stars) {
         btn.selected = NO;
     }

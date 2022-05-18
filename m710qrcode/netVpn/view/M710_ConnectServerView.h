@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface M710_ConnectServerView : UIView
 
+@property (nonatomic ,strong) Expert_ServerVPNModel *vpnModel;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -67,7 +67,7 @@
     [self addSubview:nextBtn];
     self.nextBtn = nextBtn;
     [nextBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.height.mas_equalTo(22);
+        make.width.height.mas_equalTo(40);
         make.right.equalTo(self).offset(-15);
         make.centerY.equalTo(typeTitleLab);
     }];
@@ -92,6 +92,7 @@
     self.firstView.backgroundColor = [UIColor whiteColor];
     [self.firstView jk_addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
         NSString *typeStr = self.typeLab.text;
+        [self completionHandler:typeStr];
         self.typeLab.text = self.firstLab.text;
         self.firstLab.text = typeStr;
         [self closeClick];
@@ -119,11 +120,14 @@
     self.lastView.backgroundColor = [UIColor whiteColor];
     self.lastView.hidden = YES;
     [self.lastView jk_addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
+        
         NSString *typeStr = self.typeLab.text;
+        [self completionHandler:typeStr];
         self.typeLab.text = self.lastLab.text;
         self.lastLab.text = typeStr;
-        
         [self closeClick];
+        
+        
     }];
     [self addSubview:self.lastView];
     [self.lastView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -144,6 +148,18 @@
     }];
 }
 
+
+- (void)completionHandler:(NSString *)title{
+    if (self.selectCompletionHandler) {
+        if ([title isEqualToString:@"OpenVpn(TCP)"]) {
+            self.selectCompletionHandler(SOneVPConnectModeOPENVPN_TCP);
+        }else if ([title isEqualToString:@"OpenVpn(UDP)"]){
+            self.selectCompletionHandler(SOneVPConnectModeOPENVPN_UDP);
+        }else{
+            self.selectCompletionHandler(SOneVPConnectModeIKEV2);
+        }
+    }
+}
 
 - (void)closeClick{
     
