@@ -1,0 +1,6 @@
+framework module Pods_szeroqr {
+  umbrella header "Pods-szeroqr-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -49,7 +49,7 @@ NSCharacterSet *YYTextVerticalFormRotateCharacterSet() {
         [set addCharactersInRange:NSMakeRange(0x1F200, 256)]; // Enclosed Ideographic Supplement
         [set addCharactersInRange:NSMakeRange(0x1F300, 768)]; // Enclosed Ideographic Supplement
         [set addCharactersInRange:NSMakeRange(0x1F600, 80)]; // Emoticons (Emoji)
-        [set addCharactersInRange:NSMakeRange(0x1F680, 128)]; // TranSport and Map Symbols
+        [set addCharactersInRange:NSMakeRange(0x1F680, 128)]; // Transport and Map Symbols
         
         // See http://unicode-table.com/ for more information.
     });
