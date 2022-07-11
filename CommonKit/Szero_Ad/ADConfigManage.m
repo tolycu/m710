@@ -44,7 +44,9 @@
     switch (type) {
         case ADDataType_nav:
         {
-            [self createAndLoadAdLoade:self.adDataModel];
+            if ([ADConfigSetting isLimitShowADWithAllowForkey:APP_Native_Count]) {
+                [self createAndLoadAdLoade:self.adDataModel];
+            }
         }
             break;
         case ADDataType_int:
@@ -59,7 +61,9 @@
             break;
         case ADDataType_banner:
         {
-            [self createAppBannerViewLoade:self.adDataModel];
+            if ([ADConfigSetting isLimitShowADWithAllowForkey:APP_Banner_Count]) {
+                [self createAppBannerViewLoade:self.adDataModel];
+            }
         }
             break;
         default:

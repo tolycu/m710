@@ -10,7 +10,7 @@
 #import "Szero_EditQRController.h"
 #import "Szero_CreatResultController.h"
 
-@interface Szero_CreatViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface Szero_CreatViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,GADBannerViewDelegate>
 
 @property (nonatomic ,strong) UICollectionView *collectView;
 @property (nonatomic ,strong) NSArray *dataList;
@@ -140,7 +140,8 @@
     if(temp == ADDataType_banner &&
        [NSStringFromClass([self.bannerModel.requestAD class]) isEqualToString:@"GADBannerView"]){
         self.bannerView = (GADBannerView *)self.bannerModel.requestAD;
-        self.bannerView.rootViewController = [self currentController];
+        self.bannerView.rootViewController = self;
+        self.bannerView.delegate = self;
         [self.view addSubview:self.bannerView];
         [self.bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self.view);
@@ -151,6 +152,14 @@
         [self.collectView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(self.view).offset(-60);
         }];
+    }
+}
+
+- (void)bannerViewDidRecordClick:(nonnull GADBannerView *)bannerView{
+    [ADConfigSetting clickADWithAddLimitForkey:APP_Banner_Count];
+    if (![ADConfigSetting isLimitShowADWithAllowForkey:APP_Banner_Count]) {
+        self.bannerView.hidden = YES;
+        [self.bannerView removeFromSuperview];
     }
 }
 

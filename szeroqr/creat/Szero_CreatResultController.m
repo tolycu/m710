@@ -268,7 +268,7 @@
         [self.contViewBottom install];
         return;
     }
-    [FIRAnalytics logEventWithName:ShowNativeAds parameters:@{@"id":configModel.model.expert_placeId}];
+    [FIRAnalytics logEventWithName:ShowNativeAds parameters:@{@"id":self.bannerModel.model.expert_placeId}];
     ADDataType temp = [ADConfigSetting getLoadADtype:self.bannerModel.model.expert_type];
     if(temp == ADDataType_nav &&
        [NSStringFromClass([self.bannerModel.requestAD class]) isEqualToString:@"GADNativeAd"]){

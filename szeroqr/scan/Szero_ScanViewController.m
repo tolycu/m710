@@ -16,7 +16,7 @@
 #import "Szero_ScanResultController.h"
 
 
-@interface Szero_ScanViewController ()<AVCaptureMetadataOutputObjectsDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface Szero_ScanViewController ()<AVCaptureMetadataOutputObjectsDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,GADBannerViewDelegate>
 {
     CGFloat layout_W;
     CGFloat TOP;
@@ -549,13 +549,22 @@
     if(temp == ADDataType_banner &&
        [NSStringFromClass([self.bannerModel.requestAD class]) isEqualToString:@"GADBannerView"]){
         self.bannerView = (GADBannerView *)self.bannerModel.requestAD;
-        self.bannerView.rootViewController = [self currentController];
+        self.bannerView.rootViewController = self;
+        self.bannerView.delegate = self;
         [self.view addSubview:self.bannerView];
         [self.bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self.view);
             make.bottom.equalTo(self.view).offset(-10);
             make.height.mas_equalTo(50);
         }];
+    }
+}
+
+- (void)bannerViewDidRecordClick:(nonnull GADBannerView *)bannerView{
+    [ADConfigSetting clickADWithAddLimitForkey:APP_Banner_Count];
+    if (![ADConfigSetting isLimitShowADWithAllowForkey:APP_Banner_Count]) {
+        self.bannerView.hidden = YES;
+        [self.bannerView removeFromSuperview];
     }
 }
 

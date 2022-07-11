@@ -11,7 +11,7 @@
 #import "Szero_RateView.h"
 #import "Szero_ClearCacheView.h"
 
-@interface Szero_MineViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface Szero_MineViewController ()<UITableViewDelegate,UITableViewDataSource,GADBannerViewDelegate>
 
 @property (nonatomic ,strong) UITableView *tableView;
 @property (nonatomic ,strong) NSArray *dataList;
@@ -164,6 +164,7 @@
        [NSStringFromClass([self.bannerModel.requestAD class]) isEqualToString:@"GADBannerView"]){
         self.bannerView = (GADBannerView *)self.bannerModel.requestAD;
         self.bannerView.rootViewController = [self currentController];
+        self.bannerView.delegate = self;
         [self.view addSubview:self.bannerView];
         [self.bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self.view);
@@ -174,6 +175,14 @@
         [self.tableView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(self.view).offset(-60);
         }];
+    }
+}
+
+- (void)bannerViewDidRecordClick:(nonnull GADBannerView *)bannerView{
+    [ADConfigSetting clickADWithAddLimitForkey:APP_Banner_Count];
+    if (![ADConfigSetting isLimitShowADWithAllowForkey:APP_Banner_Count]) {
+        self.bannerView.hidden = YES;
+        [self.bannerView removeFromSuperview];
     }
 }
 

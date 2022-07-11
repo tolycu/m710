@@ -81,7 +81,7 @@ typedef NS_ENUM(NSUInteger, DataStringQRType) {
 };
 
 static NSString *const APP_Native_Count = @"APP_Native_Count"; /** 原生广告点击次数 */
-static NSString *const APP_Banner_Count = @"APP_Banner_Count"; /** 原生广告点击次数 */
+static NSString *const APP_Banner_Count = @"APP_Banner_Count"; /** banner广告点击次数 */
 /**
   广告位置 adname
  */

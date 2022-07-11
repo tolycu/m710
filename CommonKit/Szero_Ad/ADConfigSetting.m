@@ -143,6 +143,9 @@
                     }
                 }
             }
+            if (!bestConfigModel) {
+                [AD_MANAGE resetADConfigManage];
+            }
             return bestConfigModel;
         }
             break;
@@ -172,6 +175,9 @@
                         }
                     }
                 }
+            }
+            if (!bestConfigModel) {
+                [AD_MANAGE resetADConfigManage];
             }
             return bestConfigModel;
         }
