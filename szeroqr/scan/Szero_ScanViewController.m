@@ -50,8 +50,6 @@
 @property(nonatomic,assign) NSInteger longTime; //检测广告时长 30s
 @property(nonatomic,assign) BOOL isClickNative;  //点击底部原生广告
 
-@property(nonatomic,assign) BOOL isHasShow;
-
 @end
 
 @implementation Szero_ScanViewController
@@ -72,10 +70,7 @@
     if (APP_CONFIG.isLoadCamera) {
         [self extracted];
     }
-    
-    if (self.isHasShow) {
-        [self showBannerAD];
-    }
+    [self showBannerAD];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -97,12 +92,7 @@
     [self configView];
     [self firstSetupCamera];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(becomBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBottomADNotif) name:Home_Banner_Show object:nil];
-}
-
-- (void)loadBottomADNotif{
-    self.isHasShow = YES;
-    [self showBannerAD];
+    
 }
 
 - (void)becomBackground{
@@ -568,9 +558,9 @@
     }
 }
 
--(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
-   [[XKConsoleBoard borad] show];
-}
+//-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+//   [[XKConsoleBoard borad] show];
+//}
 
 @end
 

@@ -36,10 +36,10 @@
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
     NSLog(@"tabbar 选中%ld",tabBarController.selectedIndex);
-    if (tabBarController.selectedIndex == 0) {
+    if (tabBarController.selectedIndex == 1) {
         viewController.tabBarItem.title = @"";
     }else{
-        UITabBarItem *item = tabBarController.tabBar.items[0];
+        UITabBarItem *item = tabBarController.tabBar.items[1];
         item.title = @"Scan";
     }
 }
@@ -95,7 +95,7 @@
     [settNa.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -4)];
     
     self.tabBar.tintColor = [UIColor colorWithString:@"#52CCBB"];
-    self.viewControllers = @[sacnNa,creatNa,historyNa,settNa];
+    self.viewControllers = @[creatNa,sacnNa,historyNa,settNa];
     
     
     if (@available(iOS 15.0, *)) {

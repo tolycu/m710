@@ -13,7 +13,8 @@
  #import <Foundation/Foundation.h>
 
  #import <FBAEMKit/FBAEMNetworking.h>
- #import <FBAEMKit/FBSKAdNetworkReporting.h>
+
+@protocol FBSKAdNetworkReporting;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,20 +23,7 @@ NS_SWIFT_NAME(AEMReporter)
 
 /**
  Configure networker used for calling Facebook AEM Graph API endpoint
- and Facebook App ID
-
- This function should be called in application(_:open:options:) from ApplicationDelegate
- and BEFORE [FBAEMReporter enable] function
-
- @param networker   An optional networker conforms to FBAEMNetworking which handles Graph API request
- @param appID   An optional Facebook app ID, if it's null, we will get it from info.plist file with key: FacebookAppID
- */
-+ (void)configureWithNetworker:(nullable id<FBAEMNetworking>)networker
-                         appID:(nullable NSString *)appID __attribute__((deprecated("use configureWithNetworker:appID:reporter: instead.")));
-
-/**
- Configure networker used for calling Facebook AEM Graph API endpoint
- and Facebook App ID
+ Facebook App ID and SKAdNetwork reporter
 
  This function should be called in application(_:open:options:) from ApplicationDelegate
  and BEFORE [FBAEMReporter enable] function. We will use SKAdNetwork reporter to prevent
@@ -48,6 +36,24 @@ NS_SWIFT_NAME(AEMReporter)
 + (void)configureWithNetworker:(nullable id<FBAEMNetworking>)networker
                          appID:(nullable NSString *)appID
                       reporter:(nullable id<FBSKAdNetworkReporting>)reporter;
+
+/**
+ Configure networker used for calling Facebook AEM Graph API endpoint
+ Facebook App ID, SKAdNetwork reporter and Analytics App ID
+
+ This function should be called in application(_:open:options:) from ApplicationDelegate
+ and BEFORE [FBAEMReporter enable] function. We will use SKAdNetwork reporter to prevent
+ double counting.
+
+ @param networker   An optional networker conforms to FBAEMNetworking which handles Graph API request
+ @param appID   An optional Facebook app ID, if it's null, we will get it from info.plist file with key: FacebookAppID
+ @param reporter   The SKAdNetwork repoter
+ @param analyticsAppID   An optional Analytics app ID.
+ */
++ (void)configureWithNetworker:(nullable id<FBAEMNetworking>)networker
+                         appID:(nullable NSString *)appID
+                      reporter:(nullable id<FBSKAdNetworkReporting>)reporter
+                analyticsAppID:(nullable NSString *)analyticsAppID;
 
 /**
  Enable AEM reporting
@@ -69,6 +75,14 @@ NS_SWIFT_NAME(AEMReporter)
  This function should be called in application(_:open:options:) from ApplicationDelegate
  */
 + (void)setCatalogMatchingEnabled:(BOOL)enabled;
+
+/**
+ Control whether to enable advertiser rule match enabled in server side. This is expected
+ to be called internally by FB SDK and will be removed in the future
+
+ This function should be called in application(_:open:options:) from ApplicationDelegate
+ */
++ (void)setAdvertiserRuleMatchInServerEnabled:(BOOL)enabled;
 
 /**
  Handle deeplink

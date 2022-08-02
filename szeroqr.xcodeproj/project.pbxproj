@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		946018902897D14D003EAFD2 /* Szero_ServerVPNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9460188F2897D14D003EAFD2 /* Szero_ServerVPNModel.m */; };
 		949B560D282B5BF40062F563 /* Szero_WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B560C282B5BF40062F563 /* Szero_WebViewController.m */; };
 		949B5615282BB38E0062F563 /* Szero_AESencrytDecrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5612282BB38E0062F563 /* Szero_AESencrytDecrypt.m */; };
 		949B5616282BB38E0062F563 /* XCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B5613282BB38E0062F563 /* XCClient.m */; };
@@ -55,6 +56,8 @@
 		94BB4B43287BFA8600F91A06 /* XKConsoleBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BB4B39287BFA8600F91A06 /* XKConsoleBoard.m */; };
 		94BB4B44287BFA8600F91A06 /* XKCrashRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BB4B3B287BFA8600F91A06 /* XKCrashRecord.m */; };
 		94BB4B45287BFA8600F91A06 /* XKDeviceDataLibrery.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BB4B3E287BFA8600F91A06 /* XKDeviceDataLibrery.m */; };
+		94BB4B48287D275400F91A06 /* Szero_SpaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BB4B47287D275400F91A06 /* Szero_SpaceController.m */; };
+		94BB4B4A287D68AB00F91A06 /* globalConfig.qr in Resources */ = {isa = PBXBuildFile; fileRef = 94BB4B49287D68AB00F91A06 /* globalConfig.qr */; };
 		94BE930A283CD85400DE0685 /* Szero_BaseTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BE9308283CD85300DE0685 /* Szero_BaseTabController.m */; };
 		94BE930D283CE52E00DE0685 /* SOneVPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BE930B283CE52E00DE0685 /* SOneVPTool.m */; };
 		94BE9310283CE56500DE0685 /* NSString+SOneExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BE930F283CE56500DE0685 /* NSString+SOneExtension.m */; };
@@ -95,6 +98,8 @@
 		781859DF46F3DD8647A4CF07 /* Pods-PacketTunnel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketTunnel.release.xcconfig"; path = "Target Support Files/Pods-PacketTunnel/Pods-PacketTunnel.release.xcconfig"; sourceTree = "<group>"; };
 		8C3566B8BE6E31423275C0CA /* Pods-szeroqr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-szeroqr.debug.xcconfig"; path = "Target Support Files/Pods-szeroqr/Pods-szeroqr.debug.xcconfig"; sourceTree = "<group>"; };
 		9440D78A41E17EFAE4DBDF80 /* Pods_PacketTunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PacketTunnel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9460188E2897D14D003EAFD2 /* Szero_ServerVPNModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Szero_ServerVPNModel.h; sourceTree = "<group>"; };
+		9460188F2897D14D003EAFD2 /* Szero_ServerVPNModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Szero_ServerVPNModel.m; sourceTree = "<group>"; };
 		949B560B282B5BEF0062F563 /* Szero_WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Szero_WebViewController.h; sourceTree = "<group>"; };
 		949B560C282B5BF40062F563 /* Szero_WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Szero_WebViewController.m; sourceTree = "<group>"; };
 		949B560F282BB38E0062F563 /* Szero_AESencrytDecrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Szero_AESencrytDecrypt.h; sourceTree = "<group>"; };
@@ -183,6 +188,9 @@
 		94BB4B3D287BFA8600F91A06 /* XKAlertUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKAlertUtil.h; sourceTree = "<group>"; };
 		94BB4B3E287BFA8600F91A06 /* XKDeviceDataLibrery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKDeviceDataLibrery.m; sourceTree = "<group>"; };
 		94BB4B3F287BFA8600F91A06 /* XKConsoleBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKConsoleBoard.h; sourceTree = "<group>"; };
+		94BB4B46287D275400F91A06 /* Szero_SpaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Szero_SpaceController.h; sourceTree = "<group>"; };
+		94BB4B47287D275400F91A06 /* Szero_SpaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Szero_SpaceController.m; sourceTree = "<group>"; };
+		94BB4B49287D68AB00F91A06 /* globalConfig.qr */ = {isa = PBXFileReference; lastKnownFileType = file; path = globalConfig.qr; sourceTree = "<group>"; };
 		94BE9308283CD85300DE0685 /* Szero_BaseTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Szero_BaseTabController.m; sourceTree = "<group>"; };
 		94BE9309283CD85400DE0685 /* Szero_BaseTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Szero_BaseTabController.h; sourceTree = "<group>"; };
 		94BE930B283CE52E00DE0685 /* SOneVPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOneVPTool.m; sourceTree = "<group>"; };
@@ -394,6 +402,8 @@
 				94A992EB281139CB00F3E521 /* Szero_BaseViewController.m */,
 				94BE9309283CD85400DE0685 /* Szero_BaseTabController.h */,
 				94BE9308283CD85300DE0685 /* Szero_BaseTabController.m */,
+				94BB4B46287D275400F91A06 /* Szero_SpaceController.h */,
+				94BB4B47287D275400F91A06 /* Szero_SpaceController.m */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -543,6 +553,7 @@
 		94C2611B28163C900075B013 /* datasource */ = {
 			isa = PBXGroup;
 			children = (
+				94BB4B49287D68AB00F91A06 /* globalConfig.qr */,
 				94F85987283399A50028AA3D /* default_serverList.txt */,
 				94C2611D28163CA10075B013 /* connect.json */,
 				94C2611C28163CA10075B013 /* start.json */,
@@ -558,6 +569,8 @@
 			children = (
 				94C261302816CA7E0075B013 /* Szero_GlobalConfigModel.h */,
 				94C2612E2816CA7E0075B013 /* Szero_GlobalConfigModel.m */,
+				9460188E2897D14D003EAFD2 /* Szero_ServerVPNModel.h */,
+				9460188F2897D14D003EAFD2 /* Szero_ServerVPNModel.m */,
 			);
 			path = Szero_model;
 			sourceTree = "<group>";
@@ -648,6 +661,7 @@
 				94BB4B2728759A2800F91A06 /* GoogleService-Info.plist in Resources */,
 				949B567F282E57480062F563 /* FirstPrivacy.html in Resources */,
 				94BB4B33287814B500F91A06 /* UnifiedNativeAdView.xib in Resources */,
+				94BB4B4A287D68AB00F91A06 /* globalConfig.qr in Resources */,
 				94C2611F28163CA10075B013 /* connect.json in Resources */,
 				949B5676282E56550062F563 /* index.html in Resources */,
 				94A992BC280FEE5900F3E521 /* Assets.xcassets in Resources */,
@@ -713,6 +727,7 @@
 				94C2613E2817F9920075B013 /* Szero_CreatUrlCell.m in Sources */,
 				94A992EC281139CB00F3E521 /* Szero_BaseNavController.m in Sources */,
 				94C2611A28156BCB0075B013 /* SportAppConfig.m in Sources */,
+				94BB4B48287D275400F91A06 /* Szero_SpaceController.m in Sources */,
 				94A992CF2810073700F3E521 /* Szero_ScanViewController.m in Sources */,
 				94BE9310283CE56500DE0685 /* NSString+SOneExtension.m in Sources */,
 				94C260F928151A9A0075B013 /* Szero_AboutViewController.m in Sources */,
@@ -734,6 +749,7 @@
 				94C2610D281559280075B013 /* Szero_CardModel.m in Sources */,
 				94C2613828179D190075B013 /* SelectNavgidueView.m in Sources */,
 				94A992ED281139CB00F3E521 /* Szero_BaseViewController.m in Sources */,
+				946018902897D14D003EAFD2 /* Szero_ServerVPNModel.m in Sources */,
 				949B560D282B5BF40062F563 /* Szero_WebViewController.m in Sources */,
 				94C26107281558D20075B013 /* Szero_GlobalMananger.m in Sources */,
 				94A993132812AD0800F3E521 /* SettingViewCell.m in Sources */,
@@ -894,7 +910,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = szeroqr/szeroqr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 102.0.2;
+				CURRENT_PROJECT_VERSION = 6.1.2;
 				DEVELOPMENT_TEAM = UPT4TR9256;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/szeroqr/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -914,7 +930,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 2.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = iqr.expert.qrcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -931,7 +947,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = szeroqr/szeroqr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 102.0.2;
+				CURRENT_PROJECT_VERSION = 6.1.2;
 				DEVELOPMENT_TEAM = UPT4TR9256;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/szeroqr/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -951,7 +967,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 2.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = iqr.expert.qrcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

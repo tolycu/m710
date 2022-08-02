@@ -39,6 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addSubView_layout];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeFlash) name:UIApplicationDidEnterBackgroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeFlash) name:App_CloseFlash object:nil];
 }
 

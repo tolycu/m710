@@ -21,6 +21,8 @@
 @property(nonatomic,strong) NSTimer *loadTimer;
 @property(nonatomic,assign) NSInteger longTime; //检测广告时长 30s
 
+@property(nonatomic,assign) BOOL isHasShow;
+
 @end
 
 @implementation Szero_CreatViewController
@@ -32,12 +34,20 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self showBannerAD];
+    if (self.isHasShow) {
+        [self showBannerAD];
+    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addSubView_layout];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBottomADNotif) name:Home_Banner_Show object:nil];
+}
+
+- (void)loadBottomADNotif{
+    self.isHasShow = YES;
+    [self showBannerAD];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

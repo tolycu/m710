@@ -82,13 +82,136 @@
         object.expert_adSource = sortArr;
     }];
 
-    //  加载广告
+    //加载广告
     [Adapter_MANAGE.globalModel.adCfgs jk_each:^(ADConfigModel *obj) {
         ADConfigManage *manage = [[ADConfigManage alloc] init];
         manage.configModel = obj;
         [AD_MANAGE.adConfigs addObject:manage];
     }];
 }
+
+/** vps列表 */
+- (void)getVpnListWithCompletionHandler:(void(^)(BOOL success,NSError *error))completionHandler{
+    NSMutableDictionary *body = [self commonParamWithDic:@{}];
+    NSString *url = [NSString stringWithFormat:@"%@%@",BASE_URL,BASE_Vpn_List];
+    [XC_CLIENT post:url params:body success:^(id  _Nonnull response) {
+        NSLog(@"请求成功--vpn列表全局配置");
+        NSString *vpnFilePath = [[SOneVPTool shareInstance]filePathWithFileName:@"vpnlist.qr"];
+        NSData *vpnData = [NSString vp_encryptAES:[response mj_JSONString]];
+        [vpnData writeToFile:vpnFilePath atomically:YES];
+        [self handleResponse:response];
+        completionHandler(YES,nil);
+    } failure:^(NSError * _Nonnull error) {
+        NSLog(@"请求失败--vpn列表配置");
+        NSDictionary *dict;
+        NSString *vpnFilePath = [[SOneVPTool shareInstance]filePathWithFileName:@"vpnlist.qr"];
+        NSData *vpnStrData = [NSString vp_decryptAES:[NSData dataWithContentsOfFile:vpnFilePath]];
+        NSString *ikev2Str = [[NSString alloc] initWithData:vpnStrData encoding:NSUTF8StringEncoding];
+        NSDictionary *tempDic = [ikev2Str mj_JSONObject];
+        if (tempDic) {
+            dict = tempDic;
+            [self handleResponse:dict];
+            completionHandler(YES,error);
+        }else{
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"vpnlist" ofType:@"qr"];
+            NSData *vpnStrData = [NSString vp_decryptAES:[NSData dataWithContentsOfFile:filePath]];
+            NSString *ikev2Str = [[NSString alloc] initWithData:vpnStrData encoding:NSUTF8StringEncoding];
+            NSDictionary *tempDic = [ikev2Str mj_JSONObject];
+            [self handleResponse:tempDic];
+            completionHandler(YES,error);
+        }
+    }];
+}
+
+- (void)handleResponse:(id _Nonnull)response{
+    NSDictionary *dict = [response objectForKey:@"data"];
+    Adapter_MANAGE.servers = [Szero_ServerVPNModel mj_objectArrayWithKeyValuesArray:dict[@"servers"]];
+}
+
+/** vps列表 */
+- (void)getAppPostionInfoWithCompletionHandler:(void(^)(BOOL success,NSError *error))completionHandler{
+    NSMutableDictionary *body = [self commonParamWithDic:@{}];
+    NSString *url = [NSString stringWithFormat:@"%@%@",BASE_URL,BASE_App_PostionInfo];
+    [XC_CLIENT post:url params:body success:^(id  _Nonnull response) {
+        NSDictionary *dict = [response objectForKey:@"data"];
+        Adapter_MANAGE.country_short = dict[@"expert_country_short"];
+        NSLog(@"请求成功--app定位");
+    } failure:^(NSError * _Nonnull error) {
+        NSLog(@"请求失败--app定位");
+    }];
+}
+
+/**ping值信息上传 */
+- (void)upLoadServersPingWithParams:(NSArray *)params CompletionHandler:(void(^)(BOOL success,NSError *error))completionHandler{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict = [self commonParamWithDic:@{}];
+    [dict jk_setObj:params forKey:@"serversStatus"];  //ping值信息
+    
+    NSDate *lastDate = [XCUserDefault objectForKey:Upload_Ping_Date];
+    NSDate *date = [NSDate jk_dateWithMinutesBeforeNow:30];
+    if (lastDate && [lastDate jk_isLaterThanDate:date]) {
+        NSLog(@"ping 未上传");
+        return;
+    }
+    NSString *url = [NSString stringWithFormat:@"%@%@",BASE_URL,BASE_VPN_UpLoad];
+    [XC_CLIENT post:url params:dict success:^(id  _Nonnull response) {
+        [XCUserDefault setObject:[NSDate date] forKey:Upload_Ping_Date];
+        NSLog(@"请求成功---ping上传");
+        completionHandler(YES,nil);
+    } failure:^(NSError * _Nonnull error) {
+        NSLog(@"请求失败---ping上传");
+        completionHandler(NO,error);
+    }];
+}
+
+/**vpn状态信息上传 */
+- (void)uploadCurrentServersStatusWithModel:(Szero_ServerVPNModel *)connectModel
+                               connectInfos:(NSArray *)connectInfos
+                          CompletionHandler:(void(^)(BOOL success,NSError *error))completionHandler {
+    
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    params = [self commonParamWithDic:params];
+    [params setObject:connectModel.expert_host forKey:@"expert_ip"];
+    
+    NSMutableDictionary *currentStatusDic = [[NSMutableDictionary alloc] init];
+    [currentStatusDic setValue:@(connectModel.ping) forKey:@"expert_pingTime"];
+    [currentStatusDic setObject:connectModel.expert_host forKey:@"expert_serverIp"];
+    [currentStatusDic setObject:@0 forKey:@"expert_auto"];
+    if (connectInfos) {
+        NSMutableArray *infos = [NSMutableArray array];
+        for (NSDictionary *object in connectInfos) {
+            NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+            for (NSString *title in object.allKeys) {
+                if ([title isEqualToString:@"port"]) {
+                    [dict setObject:object[title] forKey:@"expert_port"];
+                }else if ([title isEqualToString:@"status"]){
+                    [dict setObject:object[title] forKey:@"expert_status"];
+                }else if ([title isEqualToString:@"times"]){
+                    [dict setObject:object[title] forKey:@"expert_times"];
+                }else if ([title isEqualToString:@"type"]){
+                    [dict setObject:object[title] forKey:@"expert_type"];
+                }else{
+                    [dict setObject:object[title] forKey:title];
+                }
+            }
+            [infos addObject:dict];
+        }
+        [currentStatusDic setObject:infos forKey:@"portsInfo"];
+    }
+    [params setObject:currentStatusDic forKey:@"expert_currentServer"];
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@",BASE_URL,BASE_VPNStatus_UpLoad];
+    [XC_CLIENT post:url params:params success:^(id  _Nonnull response) {
+        NSLog(@"请求成功---VPN状态上传");
+        completionHandler(YES,nil);
+        
+    } failure:^(NSError * _Nonnull error) {
+        NSLog(@"请求失败---VPN状态上传");
+        completionHandler(NO,error);
+    }];
+}
+
+
    
 - (NSMutableDictionary *)commonParamWithDic:(NSDictionary *)dic {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithDictionary:dic];
@@ -104,10 +227,8 @@
     return dict;
 }
 
-
 - (NSString *)readCurrentCountry{
     return self.country_short?self.country_short:[[NSLocale currentLocale] objectForKey:NSLocaleCountryCode];
 }
-
 
 @end

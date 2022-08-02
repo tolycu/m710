@@ -18,6 +18,7 @@ static NSString * const BASE_VPNStatus_UpLoad = @"expert/serverstatus";
 static NSString * const BASE_Vpn_Cer = @"expert/credentials";
 
 static NSString *const APP_Launched = @"XC_APP_Launched"; /* APP第一次启动 */
+static NSString *const APP_Launched_Date = @"APP_Launched_Date"; /* APP第一次启动日期 */
 static NSString *const Upload_Ping_Date = @"Upload_Ping_Date"; /* ping值上传时间 */
 static NSString *const APP_Privacy_Agree = @"APP_Privacy_Agree"; /* 同意隐私协议 */
 

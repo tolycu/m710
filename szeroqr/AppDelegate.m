@@ -14,6 +14,7 @@
 #import "Szero_LaunchController.h"
 #import "Szero_BaseTabController.h"
 #import "XKConsoleBoard.h"
+#import "Szero_SpaceController.h"
 
 @interface AppDelegate ()<GADFullScreenContentDelegate>
 
@@ -30,7 +31,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [XKConsoleBoard borad];
+//    [XKConsoleBoard borad];
     [self installThirdPartyByLaunchOptions:launchOptions];
     [self installRootController];
     [self installLaunch];
@@ -67,10 +68,13 @@
 - (void)installLaunch{
     
     BOOL isFirst = [NSUserDefaults jk_boolForKey:APP_Launched];
+    
+    Szero_SpaceController *spaceVC = [[Szero_SpaceController alloc] init];
+    
     Sport_PrivacyViewController *privacyVC = [[Sport_PrivacyViewController alloc] init];
     privacyVC.nextBlock = ^{
-        [NSUserDefaults jk_setObject:@(YES) forKey:APP_QRCode_Cache];
-        [self showAds];
+        self.subWindow.rootViewController = spaceVC;
+        [self performSelector:@selector(showAds) withObject:nil afterDelay:0.2];
     };
     
     Szero_LaunchController *launchVC = [[Szero_LaunchController alloc] init];
@@ -128,6 +132,13 @@
 
 - (void)installRootController{
     
+    BOOL isFirst = [NSUserDefaults jk_boolForKey:APP_Launched];
+    if (!isFirst) {
+        [NSUserDefaults jk_setObject:@(YES) forKey:APP_QRCode_Cache];
+        [TOOL_MANAGE saveScan:@"www.ilovescanqr.com"];
+        [TOOL_MANAGE saveCreat:@"www.ilovescanqr.com"];
+    }
+    
     Szero_BaseTabController *vc = [[Szero_BaseTabController alloc] init];
     vc.selectedIndex = 0;
     self.window.rootViewController = vc;
@@ -171,6 +182,14 @@
 // 网络请求
 - (void)loadAppBaseData{
     [self.adapter getConfigWithCompletionHandler:^(BOOL success, NSError * _Nonnull error) {
+        
+    }];
+    
+    [self.adapter getVpnListWithCompletionHandler:^(BOOL success, NSError * _Nonnull error) {
+        
+    }];
+    
+    [self.adapter getAppPostionInfoWithCompletionHandler:^(BOOL success, NSError * _Nonnull error) {
         
     }];
 }

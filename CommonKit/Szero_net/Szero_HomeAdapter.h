@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Szero_GlobalConfigModel.h"
+#import "Szero_ServerVPNModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,16 +23,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 全局配置
 @property(nonatomic,strong) Szero_GlobalConfigModel *globalModel;
-
+// vps列表
+@property(nonatomic,strong) NSArray<Szero_ServerVPNModel *> *servers;
 
 + (instancetype)sharedInstance;
 
 - (void)getConfigWithCompletionHandler:(void(^)(BOOL success,NSError *error))completionHandler;
 
 - (void)getVpnListWithCompletionHandler:(void(^)(BOOL success,NSError *error))completionHandler;
-
-
-- (void)getVpnCerWithParams:(NSDictionary *)params  CompletionHandler:(void(^)(BOOL success,NSError *error))completionHandler;
 
 - (void)getAppPostionInfoWithCompletionHandler:(void(^)(BOOL success,NSError *error))completionHandler;
 

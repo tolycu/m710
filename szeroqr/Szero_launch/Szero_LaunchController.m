@@ -50,7 +50,7 @@
 
 - (void)checkoutConfig{
     
-    self.longTime = self.longTime + 0.5;
+    self.longTime = self.longTime + 1;
     if (Adapter_MANAGE.globalModel) {
         if (self.longTime + 4 > Adapter_MANAGE.globalModel.IStartPageTime) {
             [self.lottieView stop];
